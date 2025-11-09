@@ -4,10 +4,10 @@ import Link from "next/link";
 export default function Home() {
   return (
     <div className="Main">
-      <div className="fixed w-full bg-black h-17 text-2xl z-10"> {/*Navigation bar */}
+      <div className="fixed w-full bg-black h-17 text-2xl"> {/*Navigation bar */}
         <div className="flex mt-5">
-          <div className="flex flex-start ml-5 pr-225">
-            Mee
+          <div className="flex flex-start ml-5 pr-220">
+            <Link href={"../"} className="pl-4 pr-4 mr-4">Mee</Link>
           </div>
           <div className="flex right-0">
             <Link href={"/Skills"} className="pl-4 pr-4 mr-4">Skills</Link>
@@ -18,40 +18,11 @@ export default function Home() {
         </div>
       </div>  {/*Navigation bar end */}
 
-    {/**Main content -start */}
-    <div className="absolute inset-x-0 top-16 h-16">
-      <div className="grid grid-cols-2 gap-2 grid-rows-7 lg:grid-cols-2 sm:grid-cols-1 ">
-      <div className=" font-pix text-9xl p-5 pl-11 ">I am</div>
-              
-              
-              <div className="bg-red-300 row-span-3">hello</div>
-              
-        <div className="font-pix text-9xl p-5 pl-11">Cyberbee</div>
-      <div className="bg-blue-300 ">hello</div>
-      <div className="bg-pink-300 col-span-2 ">hello</div>
-      <div className="bg-yellow-200 col-span-2 ">hello</div>
-      <div className="bg-pink-300 col-span-2 ">hello</div>
-      <div className="bg-pink-300 col-span-2 "></div>
-
-    <div>
-      
-    </div>
 
 
 
-      </div>
-  </div>
-    {/*Main content -End*/}
-      <Footer></Footer>
-    </div>
-  );
-}
-
-
-
-const Footer =() => {
-  return<footer> {/*Footer section*/}
-      <div className="absolute bg-black w-full bottom-0 p-10" >
+      <footer> {/*Footer section*/}
+      <div className="absolute bg-black w-full inset-x-0 bottom-0 p-10" >
         <div className="grid grid-rows-4 grid-cols-2">
           <div>
             Mee
@@ -82,5 +53,7 @@ const Footer =() => {
           </div>
         </div>
       </div>
-      </footer> 
-};
+      </footer> {/*Footer section end*/}
+    </div>
+  );
+}

@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik+Pixels&display=swap');
 @import "tailwindcss";
 
 :root {
@@ -11,7 +10,6 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-  --font-pix: "Rubik Pixels", system-ui;
 }
 
 @media (prefers-color-scheme: dark) {
