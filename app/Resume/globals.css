@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Pixels&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ruthie&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ruda:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded&display=swap');
 @import "tailwindcss";
 
 :root {
@@ -10,6 +15,11 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-pix: "Rubik Pixels", system-ui;
+  --font-one: "Rubik Mono One", monospace;
+  --font-wow: "Ruthie", cursive;
+  --font-rud: "Ruda", sans-serif;
+  --font-exp: "Encode Sans Expanded", sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
