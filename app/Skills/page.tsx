@@ -12,19 +12,32 @@ export default function Home() {
 }
 
 const Navigation =() =>{
-  return<div className="fixed w-full bg-black h-17 text-2xl z-60"> {/*Navigation bar */}
-        <div className="flex mt-5">
-          <Link href={"../"} className="flex flex-start ml-5 pr-225">
-            Mee
-          </Link>
-          <div className="flex right-0">
-            <div className="pl-4 pr-4 mr-4">Skills</div>
-            <Link href={"/Resume"} className="pl-4 pr-4 mr-4">Resume</Link>
-            <Link href={"/Portfolio"} className="pl-4 pr-4 mr-4">Portfolio</Link>
-            <Link href={"/Contact_me"} className="pl-4 mr-3">Contact Me</Link>
-          </div>
+  return<div className="fixed w-full bg-black text-white z-50 shadow-lg"> {/* Navigation Bar Container */}
+    <div className="flex items-center justify-between h-16 px-4 md:px-8">
+        
+        <div className="flex items-center text-3xl font-bold tracking-wider">
+            <Link href={"../"} className="hover:text-gray-400 transition duration-300">
+                Mee
+            </Link>
         </div>
-      </div>
+        
+        <div className="hidden md:flex items-center space-x-6 text-xl">
+            <Link href={"/Skills"} className="hover:text-gray-400 transition duration-300">
+                Skills
+            </Link>
+            <Link href={"/Resume"} className="hover:text-gray-400 transition duration-300">
+                Resume
+            </Link>
+            <Link href={"/Portfolio"} className="hover:text-gray-400 transition duration-300">
+                Portfolio
+            </Link>
+            <Link href={"/Contact_me"} className="px-3 py-1 border border-white rounded hover:bg-white hover:text-black transition duration-300">
+                Contact Me
+            </Link>
+        </div>
+
+    </div>
+</div>
 }
 
 const Content =() =>{
@@ -101,6 +114,7 @@ const Content =() =>{
               <li className="p-3">GitHub</li>
               <li className="p-3">Figma</li>
               <li className="p-3">Blender</li>
+              <li className="p-3">TinkerCad</li>
 
             </ol>
           </div>
