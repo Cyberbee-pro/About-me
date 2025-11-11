@@ -115,6 +115,7 @@ const Content =() =>{
                 </div>              
             </div>
           </div>
+          <Footer></Footer>
         </div>
 };
 

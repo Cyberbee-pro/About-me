@@ -6,6 +6,7 @@ export default function Home() {
     <div className="flex flex-col min-h-screen">
       <Navigation />
       <Content />
+      
     </div>
   );
 }
@@ -91,7 +92,7 @@ const Content =() =>{
           </div>
 
 
-                    <div className="flex text-[45px] p-2 pl-11"><Image src="/tools.svg" alt="pic of cli" width={70} height={70} />Programing Languages</div>
+                    <div className="flex text-[45px] p-2 pl-11"><Image src="/tools.svg" alt="pic of cli" width={70} height={70} />Tools i use</div>
           <div className="flex">
           <div className="flex flex-col font-medium w-[40vw] ml-11 p-2">
             <ol className="list-decimal ml-[4vw] text-2xl">
@@ -117,7 +118,7 @@ const Content =() =>{
           </div>
           </div>
 
-
+            <Footer></Footer>
         </div>
 };
 
