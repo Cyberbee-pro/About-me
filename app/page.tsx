@@ -77,7 +77,8 @@ const Content =() =>{
           </p>
 
           <p className="mb-4">
-            I am fluent in Bengali, English and Hindi<br/>
+            Mother tongue : Bengali<br />
+            Working proficiency in English and Hindi<br/>
             I am currently learning Japanese, Tamil and Spanish
           </p>
 
