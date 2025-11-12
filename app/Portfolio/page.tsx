@@ -66,7 +66,7 @@ const Content =() =>{
 
   
   <div className="flex w-full justify-center space-x-16 p-6">
-    <div className="transform transition duration-500 hover:scale-50">
+    <div className="transform transition duration-500 hover:scale-20">
     <div className="mask-radial-at-center bg-[url('/Cpro.png')] w-[60vh] h-[30vh] rounded-[5%] z-10 bg-cover bg-no-repeat bg-center relative">
         <div className="bg-black/30 text-white flex items-end p-4 h-full">
             Cosmos OS - Work in pogress
@@ -74,7 +74,7 @@ const Content =() =>{
     </div>
     </div>
     
-    <div className="transform transition duration-500 hover:scale-50">
+    <div className="transform transition duration-500 hover:scale-20">
     <div className="mask-radial-at-center bg-[url('/Cpro.png')] w-[60vh] h-[30vh] rounded-[5%] z-10 bg-cover bg-no-repeat bg-center">
     <div className="bg-black/30 text-white flex items-end p-4 h-full">
             Ai or Real - Image authenticator
@@ -84,7 +84,7 @@ const Content =() =>{
   </div>
 
   <div className="flex w-full justify-center space-x-16 p-6">
-    <div className="transform transition duration-500 hover:scale-50">
+    <div className="transform transition duration-500 hover:scale-20">
     <div className="mask-radial-at-center bg-[url('/Cpro.png')] w-[60vh] h-[30vh] rounded-[5%] z-10 bg-cover bg-no-repeat bg-center relative">
         <div className="bg-black/30 text-white flex items-end p-4 h-full">
             Crop Yeild Predictor Ai
@@ -92,7 +92,7 @@ const Content =() =>{
     </div>
     </div>
 
-    <div className="transform transition duration-500 hover:scale-50">
+    <div className="transform transition duration-500 hover:scale-20">
     <div className="mask-radial-at-center bg-[url('/nthe.png')] w-[60vh] h-[30vh] rounded-[5%] z-10 bg-cover bg-no-repeat bg-center">
     <div className="bg-black/30 text-white flex items-end p-4 h-full">
             Nothing here Yet
