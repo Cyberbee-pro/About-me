@@ -89,7 +89,7 @@ const Content =() =>{
             <div className="font-exp col-span-2 text-[40px] p-5 pl-11">Facts about me </div>
           </div>
           <div>
-            <div className="flex content-around gap-10 p-9 pl-20">
+            <div className="flex content-around gap-30 p-9 pl-20 flex-wrap">
                 <div className="flex justify-center items-center w-[200px] h-[200px] bg-pink-500 rounded-[50%] text-center">
                   <div className="w-[180px] h-[180px] bg-black rounded-[50%]">
                   <div className="font-rud text-[80px] pb-0">8+</div>

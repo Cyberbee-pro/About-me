@@ -41,93 +41,71 @@ const Navigation =() =>{
 
 const Content =() =>{
   return<div className="absolute inset-x-0 top-16 h-16">
-          <div className="grid grid-cols-2 gap-2 
-                grid-rows-[auto_min-content_auto_auto_1fr_min-content] 
-                lg:grid-cols-2 sm:grid-cols-1">
-            <div className=" font-pix text-9xl p-5 pl-11 ">I am</div>
-              
-              <div className="flex row-span-3 justify-center items-center ">
-              <div className="absolute mask-radial-at-center mask-radial-from-50% bg-[url('/pfp.jpg')] w-[300px] h-[300px] rounded-[50%] z-10"></div>
-              <div className="absolute w-[300px] h-[300px] bg-black rounded-[50%] right-50"></div>
-              </div>
-              
-            <div className="relative font-pix text-9xl p-5 pl-11 h-[170px]">
-              <div className="absolute bg-pink-500 left-17 bottom-1">Cyberbee</div>
-              <div className="absolute bg-black z-10">Cyberbee</div>
-            </div>
+          <div className="tracking-widest text-[6rem] p-3 pl-11">Contact me</div>
+          <div className="tracking-wide text-[2rem] p-2 pl-12 font-ExpS ">Don’t be rude send a "Hi"</div>
 
-            <div className="relative font-one text-2xl p-5 pl-11 h-[100px]">
-              <div className="absolute bg-black z-10">Software Developer / Game Developer</div>
-              <div className="absolute bg-pink-500 translate-x-2 top-7 ">Software Developer / Game Developer</div>
-            </div>
-            <div className="col-span-2 font-wow text-[40px] p-5 pl-11">“Limited probabilities Infinite Possibilities”</div>
-            <div className="col-span-2 font-rud text-[30px] tracking-wide p-5 pl-11">
-        <div className="col-span-2 font-rud text-[30px] tracking-wide p-5 pl-11">
-          <p className="mb-4">I was born and raised in Kolkata, West Bengal</p>
-          
-          <p className="mb-4">
-            SCHOOL - Nava Nalanda (Grade - A student)<br/>
-            College - S.R.M. Ist Ktr (Y1)<br/>
-            Degree - B.Tech (C.S.E. Core)
-          </p>
-          
-          <p className="mb-4">
-            My hobbies include coding, gaming and photography.<br/>
-            I also love watching anime.
-          </p>
+          <div className="flex content-around gap-35 flex-wrap w-full pl-20 p-3">
+            
+            <Link href={"https://github.com/Cyberbee-pro"}>
+            <button className="flex items-center gap-2 sm:gap-3 bg-[#9747FF] text-white text-xl sm:text-2xl md:text-3xl font-semibold px-4 sm:px-6 py-2 sm:py-3 rounded-xl hover:bg-[#54006f98] transition w-full sm:w-auto justify-center">
+            <img src="/github.svg" alt="GitHub logo" className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10" />
+            GitHub
+            </button>
+            </Link>
 
-          <p className="mb-4">
-            I am fluent in Bengali, English and Hindi<br/>
-            I am currently learning Japanese, Tamil and Spanish
-          </p>
+            <Link href={"mailto:cyberbeepro@gmail.com?subject=Hello%20Cyberbee&body=I%20wanted%20to%20contact%20you..."}>
+            <button className="flex items-center gap-2 sm:gap-3 bg-[#9747FF] text-white text-xl sm:text-2xl md:text-3xl font-semibold px-4 sm:px-6 py-2 sm:py-3 rounded-xl hover:bg-black transition w-full sm:w-auto justify-center">
+            <img src="/gmail.svg" alt="GitHub logo" className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10" />
+            E-Mail
+            </button>
+            </Link>
 
-          <p className="mb-1 **mt-6**">My Interests:</p>
-          <p>Cosmos</p>
-          <p>Q.Tech</p>
-        </div>
-            </div>
-            <div className="font-exp col-span-2 text-[40px] p-5 pl-11">Facts about me </div>
+            <Link href={"/contact.vcf"}>
+            <button className="flex items-center gap-2 sm:gap-3 bg-[#9747FF] text-white text-xl sm:text-2xl md:text-3xl font-semibold px-4 sm:px-6 py-2 sm:py-3 rounded-xl hover:bg-black transition w-full sm:w-auto justify-center">
+            <img src="/wa.svg" alt="GitHub logo" className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10" />
+            Whatsapp
+            </button>
+            </Link>
+
+            <Link href={"/https://www.linkedin.com/in/shibraj-das"}>
+            <button className="flex items-center gap-2 sm:gap-3 bg-[#9747FF] text-white text-xl sm:text-2xl md:text-3xl font-semibold px-4 sm:px-6 py-2 sm:py-3 rounded-xl hover:bg-black transition w-full sm:w-auto justify-center">
+            <img src="/linkedin.svg" alt="GitHub logo" className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10" />
+            LinkedIn
+            </button>
+            </Link>
+
+
+
+          <Link href={"https://www.threads.com/@cyberbee_pro"}>
+            <button className="flex items-center gap-2 sm:gap-3 bg-[#9747FF] text-white text-xl sm:text-2xl md:text-3xl font-semibold px-4 sm:px-6 py-2 sm:py-3 rounded-xl hover:bg-black transition w-full sm:w-auto justify-center">
+            <img src="/threads.svg" alt="GitHub logo" className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10" />
+            Threads
+            </button>
+            </Link>
+
+            <Link href={"https://www.instagram.com/cyberbee_pro?igsh=Zm5wdWRqa2R2M2Rw"}>
+            <button className="flex items-center gap-2 sm:gap-3 bg-[#9747FF] text-white text-xl sm:text-2xl md:text-3xl font-semibold px-4 sm:px-6 py-2 sm:py-3 rounded-xl hover:bg-black transition w-full sm:w-auto justify-center">
+            <img src="/insta.svg" alt="GitHub logo" className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10" />
+            Instagram
+            </button>
+            </Link>
+
+            <Link href={"https://x.com/mrcyberbee?t=bxQuTlE1xxMSwtmHgzbGTg&s=09"}>
+            <button className="flex items-center gap-2 sm:gap-3 bg-[#9747FF] text-white text-xl sm:text-2xl md:text-3xl font-semibold px-4 sm:px-6 py-2 sm:py-3 rounded-xl hover:bg-black transition w-full sm:w-auto justify-center">
+            <img src="/twitter.svg" alt="GitHub logo" className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10" />
+            Twitter
+            </button>
+            </Link>
+
+            <Link href={"https://discord.gg/wTxAWNzSvh"}>
+            <button className="flex items-center gap-2 sm:gap-3 bg-[#9747FF] text-white text-xl sm:text-2xl md:text-3xl font-semibold px-4 sm:px-6 py-2 sm:py-3 rounded-xl hover:bg-black transition w-full sm:w-auto justify-center">
+            <img src="/discord.svg" alt="GitHub logo" className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10" />
+            Discord
+            </button>
+            </Link>
+
           </div>
-          <div>
-            <div className="flex content-around gap-10 p-9 pl-20">
-                <div className="flex justify-center items-center w-[200px] h-[200px] bg-pink-500 rounded-[50%] text-center">
-                  <div className="w-[180px] h-[180px] bg-black rounded-[50%]">
-                  <div className="font-rud text-[80px] pb-0">8+</div>
-                  <div className="font-rud text-[30px] -translate-y-[40%]">years of coding</div>
-                  </div>
-                </div>
-                <div className="flex justify-center items-center w-[200px] h-[200px] bg-pink-500 rounded-[50%] text-center">
-                  <div className="w-[180px] h-[180px] bg-black rounded-[50%]">
-                  <div className="font-rud text-[80px] pb-0">5+</div>
-                  <div className="font-rud text-[30px] -translate-y-[40%]">Happy clients</div>
-                  </div>
-                </div>
-                <div className="flex justify-center items-center w-[200px] h-[200px] bg-pink-500 rounded-[50%] text-center">
-                  <div className="w-[180px] h-[180px] bg-black rounded-[50%]">
-                  <div className="font-rud text-[60px] translate-y-[5%]">250+</div>
-                  <div className="font-rud text-[30px] -translate-y-[20%]">Problems solved</div>
-                  </div>
-                </div>
-                <div className="flex justify-center items-center w-[200px] h-[200px] bg-pink-500 rounded-[50%] text-center">
-                  <div className="w-[180px] h-[180px] bg-black rounded-[50%]">
-                  <div className="font-rud text-[80px] pb-0">1+</div>
-                  <div className="font-rud text-[25px] -translate-y-[40%]">Certifications</div>
-                  </div>
-                </div>
-                <div className="flex justify-center items-center w-[200px] h-[200px] bg-pink-500 rounded-[50%] text-center">
-                  <div className="w-[180px] h-[180px] bg-black rounded-[50%]">
-                  <div className="font-rud text-[75px] translate-y-[5%]">175+</div>
-                  <div className="font-rud text-[35px] -translate-y-[40%]">Commits</div>
-                  </div>
-                </div>
-                <div className="flex justify-center items-center w-[200px] h-[200px] bg-pink-500 rounded-[50%] text-center">
-                  <div className="w-[180px] h-[180px] bg-black rounded-[50%]">
-                  <div className="font-rud text-[80px] pb-0">4+</div>
-                  <div className="font-rud text-[27px] -translate-y-[40%]">Spoken languages</div>
-                  </div>
-                </div>              
-            </div>
-          </div>
+          <Footer></Footer>
         </div>
 };
 
