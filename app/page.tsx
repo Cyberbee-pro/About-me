@@ -71,10 +71,6 @@ const Content =() =>{
             Degree - B.Tech (C.S.E. Core)
           </p>
           
-          <p className="mb-4">
-            My hobbies include coding, gaming and photography.<br/>
-            I also love watching anime.
-          </p>
 
           <p className="mb-4">
             Mother tongue : Bengali<br />
