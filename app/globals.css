@@ -3,6 +3,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Ruthie&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ruda:wght@400..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tiny5&display=swap');
 @import "tailwindcss";
 
 :root {
@@ -15,6 +18,9 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-orbi: "Orbitron", sans-serif;
+  --font-aud:"Audiowide", sans-serif;
+  --font-t5:"Tiny5", sans-serif;
   --font-pix: "Rubik Pixels", system-ui;
   --font-one: "Rubik Mono One", monospace;
   --font-wow: "Ruthie", cursive;
