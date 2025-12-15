@@ -1,0 +1,105 @@
+import Image from "next/image";
+import Link from "next/link";
+
+export default function Home() {
+  return (
+    <div className="flex flex-col min-h-screen">
+      <Navigation />
+      <Content />
+    </div>
+  );
+}
+
+const Navigation =() =>{
+  return<div className="fixed w-full bg-black text-white z-50 shadow-lg"> {/* Navigation Bar Container */}
+    <div className="flex items-center justify-between h-16 px-4 md:px-8">
+        
+        <div className="flex items-center text-3xl font-bold tracking-wider">
+            <Link href={"../"} className="hover:text-gray-400 transition duration-300">
+                Mee
+            </Link>
+        </div>
+        
+        <div className="hidden md:flex items-center space-x-6 text-xl">
+            <Link href={"/Skills"} className="hover:text-gray-400 transition duration-300">
+                Skills
+            </Link>
+            <Link href={"/Resume"} className="hover:text-gray-400 transition duration-300">
+                Resume
+            </Link>
+            <Link href={"/Portfolio"} className="hover:text-gray-400 transition duration-300">
+                Portfolio
+            </Link>
+            <Link href={"/Contact_me"} className="px-3 py-1 border border-white rounded hover:bg-white hover:text-black transition duration-300">
+                Contact Me
+            </Link>
+        </div>
+
+    </div>
+</div>
+}
+
+const Content =() =>{
+  return<div className="absolute inset-x-0 top-16 h-16">
+    <div className="flex justify-between items-center max-w-[95vw]">
+      <div className=" text-7xl md:text-8xl p-3 pl-11">
+        Resume
+      </div>
+      <div>
+        <Link href="/CV.pdf" download>
+        <img src="/downloadb.svg" alt="GitHub logo" className=" w-9 h-9 sm:w-8 sm:h-8 md:w-10 md:h-10" />
+        </Link>
+      </div>
+    </div> 
+
+    {/* <div className="bg-black w-full p-10 mt-auto" >
+        Preview
+    </div> */}
+
+    <div className="flex justify-around">
+    <Image 
+    priority
+    src="/CV.svg"
+    height={0}
+    width={0}
+    sizes="(max-width: 768px) 40vw, 80vw"
+    className="w-[40vw] h-auto p-3"
+    alt="Resume preview" />
+    </div>
+    <Footer></Footer>
+    </div>
+};
+
+const Footer =() => {
+  return<div className="bg-black w-full p-10 mt-auto" >
+        <div className="grid grid-rows-4 grid-cols-2">
+          <div>
+            Mee
+          </div>
+          <div>
+          <Link href={"/Skills"} className="pl-4 pr-4 mr-4">Skills</Link>
+          </div>
+          <div>
+          ©️2025MeeCyberbee
+          </div>
+          <div>
+          <Link href={"/Resume"} className="pl-4 pr-4 mr-4">Resume</Link>
+          </div>
+          <div>
+          The cosmos is huge but not this
+          </div>
+          <div>
+          <Link href={"/Portfolio"} className="pl-4 pr-4 mr-4">Portfolio</Link>
+          </div>
+          <div>
+          website, use the links to visit
+          </div>
+          <div>
+          <Link href={"/Contact_me"} className="pl-4 mr-3">Contact Me</Link>
+          </div>
+          <div>
+          the other pages   
+          </div>
+        </div>
+      </div>
+};

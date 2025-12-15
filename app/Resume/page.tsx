@@ -1,116 +1,112 @@
 import Image from "next/image";
 import Link from "next/link";
 
+/* =======================
+  PAGE
+======================= */
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="min-h-screen flex flex-col bg-gradient-to-b from-[#2a003d] via-[#1a0029] to-black text-white">
       <Navigation />
       <Content />
+      <Footer />
     </div>
   );
 }
 
-const Navigation =() =>{
-  return<div className="fixed w-full bg-black text-white z-50 shadow-lg"> {/* Navigation Bar Container */}
-    <div className="flex items-center justify-between h-16 px-4 md:px-8">
-        
-        <div className="flex items-center text-3xl font-bold tracking-wider">
-            <Link href={"../"} className="hover:text-gray-400 transition duration-300">
-                Mee
-            </Link>
-        </div>
-        
-        <div className="hidden md:flex items-center space-x-6 text-xl">
-            <Link href={"/Skills"} className="hover:text-gray-400 transition duration-300">
-                Skills
-            </Link>
-            <Link href={"/Resume"} className="hover:text-gray-400 transition duration-300">
-                Resume
-            </Link>
-            <Link href={"/Portfolio"} className="hover:text-gray-400 transition duration-300">
-                Portfolio
-            </Link>
-            <Link href={"/Contact_me"} className="px-3 py-1 border border-white rounded hover:bg-white hover:text-black transition duration-300">
-                Contact Me
-            </Link>
-        </div>
+/* =======================
+  NAVIGATION
+======================= */
+const Navigation = () => {
+  return (
+    <nav className="fixed top-0 w-full h-16 z-50 backdrop-blur bg-black/70 border-b border-white/10">
+      <div className="max-w-7xl mx-auto h-full px-6 flex items-center justify-between">
+        <Link href="/" className="text-3xl font-bold tracking-wide hover:text-gray-300 transition">
+          Mee
+        </Link>
 
-    </div>
-</div>
-}
-
-const Content =() =>{
-  return<div className="absolute inset-x-0 top-16 h-16">
-            <div className="tracking-widest text-[6rem] p-3 pl-11">Resume</div>
-              <div className="tracking-widest text-[5rem] p-3 pl-16">High School 2019-2023</div>
-              <div className="tracking-widest text-[3rem] p-3 pl-22">
-            <ol className="list-disc ml-[4vw]">
-              <li className="p-3">School - Nava Nalanda High School</li>
-              <li className="p-3">Achievements :</li>
-              <ol className="list-disc ml-[4vw]">
-              <li className="p-3">Top 20% in class</li>
-            </ol>
-            </ol>
-            </div>
- 
-              <div className="tracking-widest text-[5rem] p-3 pl-16">Higher Secondary School 2023 - 2025</div>
-              <div className="tracking-widest text-[3rem] p-3 pl-22">
-            <ol className="list-disc ml-[4vw]">
-              <li className="p-3">School - Nava Nalanda High School</li>
-              <li className="p-3">Achievements :</li>
-              <ol className="list-disc ml-[4vw]">
-              <li className="p-3">Lead my team to the 2nd runner up in a national quiz competition hosted by the Union Bank. </li>
-              <li className="p-3">Did a few research works</li>
-            </ol>
-            </ol>
-            </div>
-              
-              <div className="tracking-widest text-[5rem] p-3 pl-16">B.Tech 2025-2029</div>
-              <div className="tracking-widest text-[3rem] p-3 pl-22">
-            <ol className="list-disc ml-[4vw]">
-              <li className="p-3">College - S.R.M. IST. KTR</li>
-              <li className="p-3">Achievements :</li>
-              <ol className="list-disc ml-[4vw]">
-              <li className="p-3">Participated in SIH.</li>
-              <li className="p-3">Participated in ICPC Coding contest and ranked 63 out of 250.</li>
-            </ol>
-            </ol>
-            </div>
-              
-            <Footer></Footer>
-          </div>
-};
-
-const Footer =() => {
-  return<div className="bg-black w-full p-10 mt-auto" >
-        <div className="grid grid-rows-4 grid-cols-2">
-          <div>
-            Mee
-          </div>
-          <div>
-          <Link href={"/Skills"} className="pl-4 pr-4 mr-4">Skills</Link>
-          </div>
-          <div>
-          ©️2025MeeCyberbee
-          </div>
-          <div>
-          <Link href={"/Resume"} className="pl-4 pr-4 mr-4">Resume</Link>
-          </div>
-          <div>
-          The cosmos is huge but not this
-          </div>
-          <div>
-          <Link href={"/Portfolio"} className="pl-4 pr-4 mr-4">Portfolio</Link>
-          </div>
-          <div>
-          website, use the links to visit
-          </div>
-          <div>
-          <Link href={"/Contact_me"} className="pl-4 mr-3">Contact Me</Link>
-          </div>
-          <div>
-          the other pages   
-          </div>
+        <div className="hidden md:flex items-center gap-6 text-lg">
+          <Link href="/Skills" className="hover:text-gray-300 transition">Skills</Link>
+          <Link href="/Resume" className="hover:text-gray-300 transition">Resume</Link>
+          <Link href="/Portfolio" className="hover:text-gray-300 transition">Portfolio</Link>
+          <Link
+            href="/Contact_me"
+            className="px-4 py-1 border border-white/80 rounded hover:bg-white hover:text-black transition"
+          >
+            Contact Me
+          </Link>
         </div>
       </div>
+    </nav>
+  );
+};
+
+/* =======================
+  CONTENT
+======================= */
+const Content = () => {
+  return (
+    <main className="pt-20 flex flex-col items-center">
+      
+      {/* Header */}
+      <section className="w-full max-w-7xl px-6 flex items-center justify-between py-10">
+        <h1 className="text-6xl md:text-7xl font-semibold tracking-tight">
+          Resume
+        </h1>
+
+        <Link href="/CV.pdf" download>
+          <img
+            src="/downloadb.svg"
+            alt="Download Resume"
+            className="w-10 h-10 opacity-80 hover:opacity-100 hover:scale-105 transition cursor-pointer"
+          />
+        </Link>
+      </section>
+
+      {/* Resume Preview */}
+      <section className="w-full flex justify-center pb-16">
+        <Image
+          src="/CV.svg"
+          alt="Resume preview"
+          width={0}
+          height={0}
+          sizes="(max-width: 768px) 90vw, 700px"
+          className="w-[90vw] max-w-[700px] rounded-lg bg-white shadow-2xl"
+          priority
+        />
+      </section>
+
+    </main>
+  );
+};
+
+/* =======================
+  FOOTER
+======================= */
+const Footer = () => {
+  return (
+    <footer className="bg-black/90 text-gray-400 text-sm py-10">
+      <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-6">
+        
+        <div>
+          <p className="text-white font-semibold mb-2">Mee</p>
+          <p>© 2025 MeeCyberbee</p>
+        </div>
+
+        <div className="flex flex-col gap-2">
+          <Link href="/Skills" className="hover:text-white transition">Skills</Link>
+          <Link href="/Resume" className="hover:text-white transition">Resume</Link>
+          <Link href="/Portfolio" className="hover:text-white transition">Portfolio</Link>
+          <Link href="/Contact_me" className="hover:text-white transition">Contact Me</Link>
+        </div>
+
+        <div className="col-span-2 md:col-span-2 flex items-end">
+          <p className="italic opacity-70">
+            The cosmos is huge — but not this website.
+          </p>
+        </div>
+
+      </div>
+    </footer>
+  );
 };
