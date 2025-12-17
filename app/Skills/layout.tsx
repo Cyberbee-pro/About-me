@@ -17,18 +17,16 @@ export const metadata: Metadata = {
   description: "This is my Resume .. .. .. ",
 };
 
-export default function RootLayout({
+export default function SkillsLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <div>
         {children}
-      </body>
-    </html>
+      </div>
   );
 }
+
+
