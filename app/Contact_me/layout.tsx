@@ -17,18 +17,14 @@ export const metadata: Metadata = {
   description: "This is my Resume .. .. .. ",
 };
 
-export default function RootLayout({
+export default function Contact_meLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-      </body>
-    </html>
+    <div>
+      {children}
+    </div>
   );
 }
