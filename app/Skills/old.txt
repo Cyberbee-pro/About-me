@@ -1,0 +1,212 @@
+import Image from "next/image";
+import Link from "next/link";
+
+export default function Home() {
+  return (
+    <div className="flex flex-col min-h-screen">
+      <Navigation />
+      <Content />
+      
+    </div>
+  );
+}
+
+const Navigation = () => {
+  return (
+    <nav className="fixed top-0 w-full h-16 z-50 backdrop-blur bg-black/70 border-b border-white/10">
+      <div className="max-w-7xl mx-auto h-full px-6 flex items-center justify-between">
+        <Link href="/" className="text-3xl font-bold tracking-wide hover:text-gray-300 transition">
+          Mee
+        </Link>
+
+        <div className="hidden md:flex items-center gap-6 text-lg">
+          <Link href="/Skills" className="hover:text-gray-300 transition">Skills</Link>
+          <Link href="/Resume" className="hover:text-gray-300 transition">Resume</Link>
+          <Link href="/Portfolio" className="hover:text-gray-300 transition">Portfolio</Link>
+          <Link
+            href="/Contact_me"
+            className="px-4 py-1 border border-white/80 rounded hover:bg-white hover:text-black transition"
+          >
+            Contact Me
+          </Link>
+        </div>
+      </div>
+    </nav>
+  );
+};
+
+const Content =() =>{
+  return<div className="absolute inset-x-0 top-16 h-16">
+          <div className="tracking-widest text-[6rem] p-3 pl-11">Skills</div>
+            <div className="flex tracking-wider text-[26px] p-2 pl-11">
+            <ul className="flex space-x-6 list-disc pl-3">
+              <li className="p-3">FullStack Dev</li>
+              <li className="p-3">UI/UX Designer</li>
+              <li className="p-3">Game Dev</li>
+              <li className="p-3">Game Designer</li>
+              <li className="p-3">Ai Engineer</li>
+            </ul>
+            </div>
+          <div className="flex text-[45px] p-2 pl-11"><Image src="/code.svg" alt="pic of </>" width={70} height={70} />Programing Languages</div>
+          <div className="flex font-medium justify-between max-w-[95vh] gap-32 p-2 ml-25">
+          {/* Left list */}
+          <ol className="text-2xl space-y-4">
+            <li className="relative flex items-center gap-4">
+              C
+              <Progress_bar prog={95}/>
+            </li>
+            <li className="relative flex items-center gap-4">
+              C++
+              <Progress_bar prog={65}/>
+
+            </li>
+            <li className="relative flex items-center gap-4">
+              JavaScript
+              <Progress_bar prog={75}/>
+            </li>
+            <li className="relative flex items-center gap-4">
+              TypeScript
+              <Progress_bar prog={75}/>
+            </li>
+          </ol>
+
+          {/* Right list */}
+          <ol className="text-2xl space-y-4">
+            <li className="relative flex items-center gap-4">
+              Python
+              <Progress_bar prog={70}/>
+            </li>
+            <li className="relative flex items-center gap-4">
+              HTML
+              <Progress_bar prog={95}/>
+            </li>
+            <li className="relative flex items-center gap-4">
+              CSS
+              <Progress_bar prog={95}/>
+            </li>
+          </ol>
+        </div>
+
+
+
+
+        <div className="flex text-[45px] p-2 pl-11"><Image src="/frameworks.svg" alt="pic of framework" width={70} height={70} />FrameWorks</div>
+          
+          <div className="flex font-medium justify-between max-w-[95vh] gap-32 p-2 ml-25">
+            <ol className="text-2xl space-y-4">
+              <li className="relative flex items-center gap-4">
+                React
+                <Progress_bar prog={60}/>
+              </li>
+              <li className="relative flex items-center gap-4">
+                Node.js
+                <Progress_bar prog={40}/>
+              </li>
+              <li className="relative flex items-center gap-4">
+                Next.js
+                <Progress_bar prog={75}/>
+              </li>
+            </ol>
+            <ol className="text-2xl space-y-4">
+            <li className="relative flex items-center gap-4">
+              TailWind
+              <Progress_bar prog={80}/>
+            </li>
+            <li className="relative flex items-center gap-4">
+              Numpy
+              <Progress_bar prog={50}/>
+            </li>
+            <li className="relative flex items-center gap-4">
+              Pandas
+              <Progress_bar prog={25}/>
+            </li>
+          </ol>
+          </div>
+          
+
+
+          <div className="flex text-[45px] p-2 pl-11">
+          <Image src="/tools.svg" alt="pic of cli" width={70} height={70} />
+          Tools i use
+          </div>
+          <div className="flex font-medium justify-between max-w-[95vh] gap-32 p-2 ml-25">
+            <ol className="text-2xl space-y-4">
+              <li className="relative flex items-center gap-4">
+                VS Code
+              </li>
+              <li className="relative flex items-center gap-4">
+                Apache NetBeans(Java)
+              </li>
+              <li className="relative flex items-center gap-4">
+                GitHub
+              </li>
+              <li className="relative flex items-center gap-4">
+              Unreal Engine
+              </li>
+            </ol>
+            <ol className="text-2xl space-y-4">
+            <li className="relative flex items-center gap-4">
+              Figma
+            </li>
+            <li className="relative flex items-center gap-4">
+              Blender
+            </li>
+            <li className="relative flex items-center gap-4">
+              DaVinchi Resolve
+            </li>
+          </ol>
+          </div>
+            <Footer></Footer>
+        </div>
+};
+
+const Progress_bar =({
+  prog,
+}: {
+  prog: number;
+}
+) =>{
+  let wid = Math.max(0,Math.min(100,prog));
+  return(
+    <div className="flex bg-gray-600 h-4 w-40 rounded">
+      <div 
+      className="relative bg-pink-500  h-4 rounded" 
+      style={{width : `${wid}%`}}></div>
+      </div>
+  );
+};
+
+
+const Footer =() => {
+  return<div className="bg-black w-full p-10 mt-auto" >
+        <div className="grid grid-rows-4 grid-cols-2">
+          <div>
+            Mee
+          </div>
+          <div>
+          <Link href={"/Skills"} className="pl-4 pr-4 mr-4">Skills</Link>
+          </div>
+          <div>
+          ©️2025MeeCyberbee
+          </div>
+          <div>
+          <Link href={"/Resume"} className="pl-4 pr-4 mr-4">Resume</Link>
+          </div>
+          <div>
+          The cosmos is huge but not this
+          </div>
+          <div>
+          <Link href={"/Portfolio"} className="pl-4 pr-4 mr-4">Portfolio</Link>
+          </div>
+          <div>
+          website, use the links to visit
+          </div>
+          <div>
+          <Link href={"/Contact_me"} className="pl-4 mr-3">Contact Me</Link>
+          </div>
+          <div>
+          the other pages   
+          </div>
+        </div>
+      </div>
+};
