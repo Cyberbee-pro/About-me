@@ -20,7 +20,7 @@ const Navigation = () => (
         Mee
       </Link>
 
-      <div className="hidden md:flex items-center gap-6 text-lg">
+      <div className="flex items-center gap-6 md:text-lg sm:text-sm">
         <Link href="/Skills" className="hover:text-gray-300">Skills</Link>
         <Link href="/Resume" className="hover:text-gray-300">Resume</Link>
         <Link href="/Portfolio" className="hover:text-gray-300">Portfolio</Link>
