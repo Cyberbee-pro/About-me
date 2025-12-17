@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col bg-gradient-to-b from-[#2a003d] via-[#1a0029] to-black text-white">
+    <div className="min-h-screen flex flex-col bg-gradient-to-b from-[#35014d] via-[#1a0029] to-[#1d022a] text-white">
       <Navigation />
       <Content />
       <Footer />
@@ -15,7 +15,7 @@ export default function Home() {
 ===================== */
 const Navigation = () => (
   <nav className="fixed top-0 w-full h-16 z-50 backdrop-blur bg-black/70 border-b border-white/10">
-    <div className="max-w-7xl mx-auto h-full px-6 flex items-center justify-between">
+    <div className="max-w-[95vw] mx-auto h-full px-6 flex items-center justify-between">
       <Link href="/" className="text-3xl font-bold tracking-wide hover:text-gray-300 transition">
         Mee
       </Link>
