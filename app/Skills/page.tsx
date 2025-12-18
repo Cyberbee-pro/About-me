@@ -88,6 +88,7 @@ const Content = () => {
             ["React", 60],
             ["Node.js", 40],
             ["Next.js", 75],
+            ["Flutter",20],
           ]}
         />
         <SkillList
