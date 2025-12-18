@@ -65,12 +65,13 @@ const Content = () => {
           items={[
             ["C", 95],
             ["C++", 65],
+            ["Java",85],
             ["JavaScript", 75],
-            ["TypeScript", 75],
           ]}
         />
         <SkillList
           items={[
+            ["TypeScript", 75],
             ["Python", 70],
             ["HTML", 95],
             ["CSS", 95],
