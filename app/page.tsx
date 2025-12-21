@@ -143,10 +143,10 @@ const Content = () => {
         <div className="flex flex-wrap justify-center md:justify-start gap-12">
           {[
             ["8+", "Years of coding"],
-            ["5+", "Happy clients"],
+            ["4+", "Happy clients"],
             ["250+", "Problems solved"],
-            ["1+", "Certifications"],
-            ["175+", "Commits"],
+            ["3+", "Certifications"],
+            ["200+", "Commits"],
             ["4+", "Languages"],
           ].map(([num, label]) => (
             <div key={label} className="group flex justify-center items-center w-[180px] h-[180px] md:w-[210px] md:h-[210px] bg-pink-500 rounded-full transition-all duration-500 hover:shadow-[0_0_30px_rgba(236,72,153,0.4)]">
