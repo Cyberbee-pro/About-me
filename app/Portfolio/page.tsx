@@ -27,7 +27,7 @@ const Content = () => {
     <main className="pt-32 flex-1">
       {/* TITLE SECTION */}
       <section className="max-w-7xl mx-auto px-6 md:px-12 mb-12">
-        <h1 className="text-6xl md:text-8xl font-bold tracking-tighter opacity-90">
+        <h1 className="text-6xl md:text-8xl font-bold tracking-widest opacity-90">
           Portfolio
         </h1>
         <div className="h-1 w-24 bg-purple-500 mt-4 rounded-full"></div>
