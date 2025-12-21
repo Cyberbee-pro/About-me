@@ -1,40 +1,19 @@
 import Image from "next/image";
 import Link from "next/link";
+import Navbar from "@/app/Navigation/NavBar";
+import Footer from "./Navigation/Footer";
+
 
 export default function Home() {
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-b from-[#35014d] via-[#1a0029] to-[#1d022a] text-white">
-      <Navigation />
+      <Navbar />
       <Content />
       <Footer />
     </div>
   );
 }
 
-/* =====================
-  NAVIGATION
-===================== */
-const Navigation = () => (
-  <nav className="fixed top-0 w-full h-16 z-50 backdrop-blur bg-black/70 border-b border-white/10">
-    <div className="max-w-[95vw] mx-auto h-full px-6 flex items-center justify-between">
-      <Link href="/" className="text-3xl font-bold tracking-wide hover:text-gray-300 transition">
-        Mee
-      </Link>
-
-      <div className="flex items-center gap-6 md:text-lg sm:text-sm">
-        <Link href="/Skills" className="hover:text-gray-300">Skills</Link>
-        <Link href="/Resume" className="hover:text-gray-300">Resume</Link>
-        <Link href="/Portfolio" className="hover:text-gray-300">Portfolio</Link>
-        <Link
-          href="/Contact_me"
-          className="px-4 py-1 border border-white/80 rounded hover:bg-white hover:text-black transition"
-        >
-          Contact Me
-        </Link>
-      </div>
-    </div>
-  </nav>
-);
 
 /* =====================
   CONTENT
@@ -142,28 +121,3 @@ const Content = () => {
     </main>
   );
 };
-
-/* =====================
-  FOOTER
-===================== */
-const Footer = () => (
-  <footer className="bg-black w-full p-10 mt-20 text-gray-400 text-sm">
-    <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6">
-      <div>
-        <p className="text-white font-semibold">Mee</p>
-        <p>© 2025 MeeCyberbee</p>
-      </div>
-
-      <div className="flex flex-col gap-2">
-        <Link href="/Skills">Skills</Link>
-        <Link href="/Resume">Resume</Link>
-        <Link href="/Portfolio">Portfolio</Link>
-        <Link href="/Contact_me">Contact Me</Link>
-      </div>
-
-      <div className="col-span-2 italic opacity-70 flex items-end">
-        The cosmos is huge — but not this website.
-      </div>
-    </div>
-  </footer>
-);

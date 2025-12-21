@@ -1,5 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
+import Navbar from "../Navigation/NavBar";
+import Footer from "../Navigation/Footer";
+
 
 /* =======================
   PAGE
@@ -7,39 +10,12 @@ import Link from "next/link";
 export default function Home() {
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-b from-[#35014d] via-[#1a0029] to-[#1d022a] text-white">
-      <Navigation />
+      <Navbar />
       <Content />
       <Footer />
     </div>
   );
 }
-
-/* =======================
-  NAVIGATION
-======================= */
-const Navigation = () => {
-  return (
-    <nav className="fixed top-0 w-full h-16 z-50 backdrop-blur bg-black/70 border-b border-white/10">
-      <div className="max-w-[95vw] mx-auto h-full px-6 flex items-center justify-between">
-        <Link href="/" className="text-3xl font-bold tracking-wide hover:text-gray-300 transition">
-          Mee
-        </Link>
-
-        <div className="flex items-center gap-6 md:text-lg sm:text-sm">
-          <Link href="/Skills" className="hover:text-gray-300 transition">Skills</Link>
-          <Link href="/Resume" className="hover:text-gray-300 transition">Resume</Link>
-          <Link href="/Portfolio" className="hover:text-gray-300 transition">Portfolio</Link>
-          <Link
-            href="/Contact_me"
-            className="px-4 py-1 border border-white/80 rounded hover:bg-white hover:text-black transition"
-          >
-            Contact Me
-          </Link>
-        </div>
-      </div>
-    </nav>
-  );
-};
 
 /* =======================
   CONTENT
@@ -80,33 +56,4 @@ const Content = () => {
   );
 };
 
-/* =======================
-  FOOTER
-======================= */
-const Footer = () => {
-  return (
-    <footer className="bg-black/90 text-gray-400 text-sm py-10">
-      <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-6">
-        
-        <div>
-          <p className="text-white font-semibold mb-2">Mee</p>
-          <p>© 2025 MeeCyberbee</p>
-        </div>
 
-        <div className="flex flex-col gap-2">
-          <Link href="/Skills" className="hover:text-white transition">Skills</Link>
-          <Link href="/Resume" className="hover:text-white transition">Resume</Link>
-          <Link href="/Portfolio" className="hover:text-white transition">Portfolio</Link>
-          <Link href="/Contact_me" className="hover:text-white transition">Contact Me</Link>
-        </div>
-
-        <div className="col-span-2 md:col-span-2 flex items-end">
-          <p className="italic opacity-70">
-            The cosmos is huge — but not this website.
-          </p>
-        </div>
-
-      </div>
-    </footer>
-  );
-};
