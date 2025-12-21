@@ -1,10 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
+import Navbar from "../Navigation/NavBar";
+import Footer from "../Navigation/Footer";
+
 
 export default function Home() {
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-b from-[#35014d] via-[#1a0029] to-[#1d022a] text-white">
-      <Navigation />
+      <Navbar />
       <Content />
       <Footer />
     </div>
@@ -179,24 +182,3 @@ const ProgressBar = ({ prog }: { prog: number }) => {
     </div>
   );
 };
-
-/* =====================
-  FOOTER
-===================== */
-const Footer = () => (
-  <footer className="bg-black w-full p-8 sm:p-10 mt-20 text-gray-400 text-sm">
-    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-      <div>Mee</div>
-      <Link href="/Skills">Skills</Link>
-
-      <div>© 2025 MeeCyberbee</div>
-      <Link href="/Resume">Resume</Link>
-
-      <div>The cosmos is huge but not this</div>
-      <Link href="/Portfolio">Portfolio</Link>
-
-      <div>website, use the links to visit</div>
-      <Link href="/Contact_me">Contact Me</Link>
-    </div>
-  </footer>
-);
