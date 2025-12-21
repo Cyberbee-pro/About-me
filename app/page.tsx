@@ -1,12 +1,13 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/app/Navigation/NavBar";
-import Footer from "./Navigation/Footer";
-
+import Footer from "@/app/Navigation/Footer";
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col bg-gradient-to-b from-[#35014d] via-[#1a0029] to-[#1d022a] text-white">
+    <div className="min-h-screen flex flex-col bg-gradient-to-b from-[#35014d] via-[#1a0029] to-[#1d022a] text-white overflow-x-hidden">
       <Navbar />
       <Content />
       <Footer />
@@ -14,93 +15,132 @@ export default function Home() {
   );
 }
 
-
 /* =====================
   CONTENT
 ===================== */
 const Content = () => {
   return (
-    <main className="pt-20 flex flex-col">
-
-      {/* HERO */}
-      <section className="px-8 md:px-11 pt-11 flex flex-col md:flex-row justify-between gap-16">
+    <main className="pt-32 flex flex-col items-center">
+      
+      {/* HERO SECTION */}
+      <section className="w-full max-w-7xl px-8 md:px-11 flex flex-col lg:flex-row justify-between items-center gap-16">
         
         {/* LEFT TEXT */}
-        <div className="flex flex-col space-y-8 max-w-2xl">
-          <h1 className="font-orbi font-extrabold tracking-widest text-7xl md:text-9xl">
+        <div className="flex flex-col space-y-10 max-w-2xl w-full">
+          <h1 className="font-orbi font-extrabold tracking-widest text-7xl md:text-9xl opacity-90">
             Hi there
           </h1>
 
-          {/* Name */}
-          <div className="relative font-t5 text-7xl md:text-9xl">
-            <div className="absolute bg-pink-500 translate-x-9 translate-y-6">
+          {/* Name with Offset Effect */}
+          <div className="relative group self-start">
+            <div className="absolute bg-pink-500 text-pink-500 select-none translate-x-4 translate-y-3 md:translate-x-9 md:translate-y-6 font-t5 text-7xl md:text-9xl tracking-wider">
               Shibraj here
             </div>
-            <div className="relative bg-black z-10">
+            <div className="relative bg-black px-2 font-t5 text-7xl md:text-9xl tracking-wider border border-white/5">
               Shibraj here
             </div>
           </div>
 
-          {/* Role */}
-          <div className="relative font-one text-xl md:text-2xl">
-            <div className="absolute bg-pink-500 px-2 translate-x-6 translate-y-3">
+          {/* Role with Offset Effect */}
+          <div className="relative group self-start">
+            <div className="absolute bg-pink-500 text-pink-500 select-none translate-x-3 translate-y-2 md:translate-x-6 md:translate-y-3 font-one text-xl md:text-2xl tracking-wider">
               FullStack Developer / Game Developer
             </div>
-            <div className="relative bg-black z-10">
+            <div className="relative bg-black px-4 py-1 font-one text-xl md:text-2xl tracking-wider border border-white/5">
               FullStack Developer / Game Developer
             </div>
           </div>
         </div>
 
-        {/* RIGHT IMAGE */}
-        <div className="flex justify-center items-center">
-          <div className="relative w-[clamp(220px,40vw,400px)] h-[clamp(220px,40vw,400px)]">
-            <div
-              className="absolute inset-0 rounded-full bg-cover bg-center mask-radial-at-center mask-radial-from-50% z-1"
-              style={{ backgroundImage: "url('/pfp.jpg')" }}
-            />
-            <div className="absolute inset-0 rounded-full bg-black z-0" />
+        {/* RIGHT IMAGE - PERFORMANCE OPTIMIZED */}
+        <div className="relative group">
+          {/* Decorative Glow Ring */}
+          <div className="absolute -inset-4 bg-gradient-to-tr from-pink-500/30 to-purple-500/30 rounded-full blur-2xl group-hover:opacity-60 transition duration-1000"></div>
+          
+          <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full p-1 bg-gradient-to-tr from-pink-500/50 to-purple-500/50">
+            <div className="w-full h-full rounded-full bg-black overflow-hidden relative">
+              <Image
+                src="/pfp.jpg"
+                alt="Shibraj Profile"
+                fill
+                priority // Preloads image for speed
+                quality={90}
+                sizes="(max-width: 768px) 256px, (max-width: 1024px) 320px, 384px"
+                className="object-cover"
+              />
+            </div>
           </div>
         </div>
       </section>
 
-      {/* QUOTE */}
-      <section className="font-wow tracking-wider text-[32px] md:text-[40px] p-5 pl-11 mt-20">
-        “Limited probabilities. Infinite possibilities.”
-      </section>
-
-      {/* BIO */}
-      <section className="font-rud text-[24px] md:text-[30px] tracking-wide p-5 pl-11 max-w-6xl">
-        <p className="mb-6">
-          Motivated developer with experience in game development, web technologies,
-          and AI research. Skilled in JavaScript, TypeScript, C, C++, Java, Python,
-          React, Next.js, Node.js, NumPy, Pandas, Blender, GitHub, and Figma.
-        </p>
-
-        <div className="mb-6">
-          <p>School — Nava Nalanda (Grade A)</p>
-          <p className="text-xs text-gray-400">Kolkata, West Bengal</p>
-          <p className="mt-2">College — SRM IST KTR (B.Tech CSE Core)</p>
-          <p className="text-xs text-gray-400">Chennai, Tamil Nadu</p>
-        </div>
-
-        <div className="mb-6">
-          <p>Mother tongue: Bengali</p>
-          <p>Working proficiency: English, Hindi</p>
-          <p>Learning: Japanese, Tamil, Spanish</p>
-        </div>
-
-        <div>
-          <p className="mt-6">My Interests:</p>
-          <p>Cosmos · Quantum Tech</p>
+      {/* QUOTE WITH DISTINCT VERTICAL BAR */}
+      <section className="w-full max-w-7xl px-8 md:px-11 mt-32 mb-16">
+        <div className="flex flex-row items-stretch gap-6">
+          {/* THE BAR: Explicit Div Element */}
+          <div className="w-1.5 md:w-2 bg-pink-500 rounded-full shadow-[0_0_15px_rgba(236,72,153,0.8)] shrink-0"></div>
+          
+          {/* The Quote */}
+          <p className="font-wow tracking-wider text-[32px] md:text-[45px] italic leading-tight py-2">
+            “Limited probabilities. <br className="md:hidden" />
+            <span className="text-pink-500">Infinite possibilities.</span>”
+          </p>
         </div>
       </section>
 
-      {/* FACTS */}
-      <section className="hidden md:block pl-11 mt-20">
-        <h2 className="font-exp text-[40px] mb-10">Facts about me</h2>
+      {/* BIO & INFO (GLASSMORPHISM STYLE) */}
+      <section className="w-full max-w-7xl px-8 md:px-11 grid grid-cols-1 lg:grid-cols-2 gap-12 mb-32 font-rud">
+        <div className="space-y-8 text-[22px] md:text-[28px] leading-relaxed tracking-wide text-gray-200">
+          <p>
+            Motivated developer with experience in game development, web technologies,
+            and AI research. Skilled in JavaScript, TypeScript, C, C++, Java, Python,
+            React, Next.js, Node.js, NumPy, Pandas, Blender, GitHub, and Figma.
+          </p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-8 border-t border-white/10">
+            <div>
+              <h3 className="text-pink-500 font-bold mb-3 uppercase text-sm tracking-[0.3em]">Education</h3>
+              <div className="space-y-4">
+                <div className="text-xl">
+                  <p>SRM IST KTR</p>
+                  <p className="text-xs text-gray-400">B.Tech CSE Core · Chennai</p>
+                </div>
+                <div className="text-xl">
+                  <p>Nava Nalanda</p>
+                  <p className="text-xs text-gray-400">Grade A · Kolkata</p>
+                </div>
+              </div>
+            </div>
+            
+            <div>
+              <h3 className="text-pink-500 font-bold mb-3 uppercase text-sm tracking-[0.3em]">Languages</h3>
+              <div className="space-y-1 text-xl">
+                <p>Bengali <span className="text-xs opacity-50 ml-2">(Native)</span></p>
+                <p>English, Hindi <span className="text-xs opacity-50 ml-2">(Fluent)</span></p>
+                <p className="text-sm italic text-gray-500 pt-2">Learning: Japanese, Tamil, Spanish</p>
+              </div>
+            </div>
+          </div>
+        </div>
 
-        <div className="flex flex-wrap gap-10">
+        {/* Interests Card */}
+        <div className="flex flex-col justify-center bg-white/5 p-10 rounded-3xl border border-white/10 backdrop-blur-sm relative overflow-hidden group">
+          <div className="absolute top-0 right-0 w-32 h-32 bg-purple-500/10 blur-3xl rounded-full"></div>
+          <p className="text-pink-500 font-bold tracking-[0.4em] uppercase text-xs mb-4">Focus Areas</p>
+          <p className="text-4xl md:text-6xl font-bold tracking-tighter mb-8 leading-none">
+            Cosmos & <br /> 
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-purple-400">Quantum Tech</span>
+          </p>
+          <div className="h-1 w-20 bg-pink-500 rounded-full group-hover:w-32 transition-all duration-500"></div>
+        </div>
+      </section>
+
+      {/* FACTS SECTION */}
+      <section className="w-full max-w-7xl px-8 md:px-11 pb-32">
+        <h2 className="font-exp text-[40px] mb-16 tracking-widest border-b border-white/5 pb-4">
+          Facts about me
+        </h2>
+
+        <div className="flex flex-wrap justify-center md:justify-start gap-12">
           {[
             ["8+", "Years of coding"],
             ["5+", "Happy clients"],
@@ -109,10 +149,10 @@ const Content = () => {
             ["175+", "Commits"],
             ["4+", "Languages"],
           ].map(([num, label]) => (
-            <div key={label} className="flex justify-center items-center w-[200px] h-[200px] bg-pink-500 rounded-full">
-              <div className="w-[180px] h-[180px] bg-black rounded-full flex flex-col justify-center items-center text-center">
-                <div className="font-rud text-[60px]">{num}</div>
-                <div className="font-rud text-[20px]">{label}</div>
+            <div key={label} className="group flex justify-center items-center w-[180px] h-[180px] md:w-[210px] md:h-[210px] bg-pink-500 rounded-full transition-all duration-500 hover:shadow-[0_0_30px_rgba(236,72,153,0.4)]">
+              <div className="w-[170px] h-[170px] md:w-[200px] md:h-[200px] bg-black rounded-full flex flex-col justify-center items-center text-center group-hover:scale-[0.97] transition-transform">
+                <div className="font-rud text-[55px] md:text-[65px] leading-none mb-1">{num}</div>
+                <div className="font-rud text-[16px] md:text-[18px] text-pink-500 tracking-tight">{label}</div>
               </div>
             </div>
           ))}
