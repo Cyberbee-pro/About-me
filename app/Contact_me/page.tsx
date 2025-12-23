@@ -65,7 +65,7 @@ const Content = () => {
 /* =====================
   CONTACT BUTTON
 ===================== */
-const ContactButton = ({
+export const ContactButton = ({
   icon,
   text,
   link,

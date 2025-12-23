@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/app/Navigation/NavBar";
 import Footer from "@/app/Navigation/Footer";
+import { ContactButton } from "@/app/Contact_me/page";
 
 export default function Home() {
   return (
@@ -125,13 +126,16 @@ const Content = () => {
         {/* Interests Card */}
         <div className="flex flex-col justify-center bg-white/5 p-10 rounded-3xl border border-white/10 backdrop-blur-sm relative overflow-hidden group">
           <div className="absolute top-0 right-0 w-32 h-32 bg-purple-500/10 blur-3xl rounded-full"></div>
-          <p className="text-pink-500 font-bold tracking-[0.4em] uppercase text-xs mb-4">Focus Areas</p>
+          <p className="text-pink-500 font-bold tracking-[0.4em] uppercase text-xs mb-4">My Intrests</p>
           <p className="text-4xl md:text-6xl font-bold tracking-tighter mb-8 leading-none">
             Cosmos & <br /> 
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-purple-400">Quantum Tech</span>
+            <span className="text-transparent bg-clip-text bg-linear-to-r from-white to-purple-400">Quantum Tech</span>
           </p>
           <div className="h-1 w-20 bg-pink-500 rounded-full group-hover:w-32 transition-all duration-500"></div>
         </div>
+        {/* <div className="p-5 w-30 bg-purple-500 mt-4 rounded-full shadow-[0_0_15px_rgba(168,85,247,0.5)]">Skills {'>'}</div> */}
+        <ContactButton icon="/code.svg" text="Skills >" link="/Skills" />
+
       </section>
 
       {/* FACTS SECTION */}
