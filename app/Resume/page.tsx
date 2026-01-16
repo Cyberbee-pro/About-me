@@ -64,7 +64,7 @@ const Content = () => {
               height={1131} // Standard A4 ratio (1:1.414)
               className="w-[90vw] max-w-[800px] h-auto"
               priority
-              quality={90}
+              quality={60}
             />
           </div>
         </div>
