@@ -37,7 +37,7 @@ const Content = () => {
       <section className="max-w-7xl mx-auto px-6 md:px-12 pb-24">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
           <ProjectCard
-            image="/SolEspania.png"
+            image="/solespania.png"
             title="SolEspania — Spain Tour Guide"
             link="https://spain-tour-guide.vercel.app/"
           />
@@ -51,8 +51,9 @@ const Content = () => {
             link ="https://github.com/Cyberbee-pro/SynthFlow"
           />
           <ProjectCard
-            image="/Cpro.png"
+            image="/Angelplayer.png"
             title="Angel Player — Work in Progress"
+            link = "https://github.com/Cyberbee-pro/anti-doom-scroll-extension-"
           />
           <ProjectCard
             image="/Cpro.png"
