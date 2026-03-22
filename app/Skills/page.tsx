@@ -32,7 +32,7 @@ const Content = () => {
       <section className="max-w-7xl mx-auto px-6 md:px-12">
         {/* ROLES / TAGS */}
         <div className="flex flex-wrap gap-3 mb-20">
-          {["FullStack Developer", "UI/UX Designer", "Game Developer", "Game Designer", "AI Engineer"].map((role) => (
+          {["FullStack Developer","System Designer", "UI/UX Designer", "Game Developer", "Game Designer", "AI Engineer"].map((role) => (
             <span 
               key={role} 
               className="px-4 py-2 bg-white/5 border border-white/10 rounded-full text-sm md:text-lg tracking-wide hover:bg-purple-500/20 hover:border-purple-500/50 transition-all cursor-default"
@@ -80,6 +80,7 @@ const Content = () => {
               ["Tailwind", 80],
               ["NumPy", 50],
               ["Pandas", 25],
+              ["Plasmo",50]
             ]}
           />
         </TwoColumn>
@@ -100,6 +101,7 @@ const Content = () => {
               "Figma",
               "Blender",
               "DaVinci Resolve",
+              "Linux"
             ]}
           />
         </TwoColumn>

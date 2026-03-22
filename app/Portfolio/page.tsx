@@ -46,8 +46,17 @@ const Content = () => {
             title="Brain 3D Model (Blender)"
           />
           <ProjectCard
+            image="/Synthflow.svg"
+            title="Synthflow — Work in Progress"
+            link ="https://github.com/Cyberbee-pro/SynthFlow"
+          />
+          <ProjectCard
             image="/Cpro.png"
-            title="Cosmos OS — Work in Progress"
+            title="Angel Player — Work in Progress"
+          />
+          <ProjectCard
+            image="/Cpro.png"
+            title="Beedots — Work in Progress"
           />
           <ProjectCard
             image="/Cpro.png"
