@@ -56,6 +56,11 @@ const Content = () => {
             link = "https://github.com/Cyberbee-pro/anti-doom-scroll-extension-"
           />
           <ProjectCard
+            image="/Hackclock.svg"
+            title="HackClock"
+            link = "https://hackclock.vercel.app/"
+          />
+          <ProjectCard
             image="/Cpro.png"
             title="Beedots — Work in Progress"
           />
