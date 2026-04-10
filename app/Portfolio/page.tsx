@@ -51,7 +51,7 @@ const projectsData: Project[] = [
     image: "/Hackclock.svg",
     title: "HackClock",
     description: "hackTime is a hackathon control room for organizers, stage screens, and participants. It lets you create a timed event flow, launch a live countdown, broadcast announcements, and share a room code so teams can join the clock view instantly.",
-    deployedLink: "https://hackclock.vercel.app/",
+    deployedLink: "https://hacktime.githubsrmist.in/",
     githubLink: "https://github.com/SRM-IST-KTR/hacktime",
   },
   {
