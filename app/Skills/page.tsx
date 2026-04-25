@@ -56,6 +56,7 @@ const Content = () => {
           />
           <SkillList
             items={[
+              ["shell scripting(Bash)",30],
               ["TypeScript", 75],
               ["Python", 70],
               ["HTML", 95],
@@ -90,10 +91,12 @@ const Content = () => {
         <TwoColumn>
           <SimpleList
             items={[
+              "Linux",
+              "Vim",
+              "Bash",
               "VS Code",
               "Apache NetBeans (Java)",
-              "GitHub",
-              "Unreal Engine",
+
             ]}
           />
           <SimpleList
@@ -101,7 +104,8 @@ const Content = () => {
               "Figma",
               "Blender",
               "DaVinci Resolve",
-              "Linux"
+              "GitHub",
+              "Unreal Engine",
             ]}
           />
         </TwoColumn>
