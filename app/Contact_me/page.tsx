@@ -39,18 +39,17 @@ const Content = () => {
         <ContactButton
           icon="/gmail.svg"
           text="E-Mail"
-          link="mailto:cyberbeepro@gmail.com?subject=Hello%20Cyberbee"
+          link="mailto:cyb.shibrajdas@gmail.com?subject=Hello%20Shibraj%20Das!%20from%20your%20site"
         />
-        <ContactButton icon="/wa.svg" text="WhatsApp" link="/contact.vcf" />
         <ContactButton
           icon="/linkedin.svg"
           text="LinkedIn"
           link="https://www.linkedin.com/in/shibraj-das"
         />
-        <ContactButton icon="/threads.svg" text="Threads" link="https://www.threads.com/@cyberbee_pro" />
-        <ContactButton icon="/insta.svg" text="Instagram" link="https://www.instagram.com/cyberbee_pro" />
+        <ContactButton icon="/threads.svg" text="Threads" link="https://www.threads.com/@mrcyberbee_pro" />
+        <ContactButton icon="/insta.svg" text="Instagram" link="https://www.instagram.com/mrcyberbee_pro" />
         <ContactButton icon="/twitter.svg" text="Twitter" link="https://x.com/mrcyberbee" />
-        <ContactButton icon="/discord.svg" text="Discord" link="https://discord.gg/wTxAWNzSvh" />
+        <ContactButton icon="/discord.svg" text="Discord" link="https://discord.gg/rqMTFUC7Ds" />
       </div>
 
       {/* OPTIONAL: COSMOS DECORATION */}
