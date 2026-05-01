@@ -32,6 +32,8 @@ export default function ResumePage() {
           speed={1.3}
           edgeFade={0.33}
           transparent
+          className=""
+          style={{}}
         />
       </div>
 

@@ -30,6 +30,8 @@ export default function Home() {
           speed={1.3}
           edgeFade={0.33}
           transparent
+          className=""
+          style={{}}
         />
       </div>
 
@@ -171,24 +173,17 @@ const Content = () => {
 
       
         <div className="flex flex-col w-full pl-16 pr-16">
-        <section className="flex flex-col w-full p-2">
-          <div className="flex justify-between w-full">
-          <h2 className="flex font-exp text-[40px] mb-16 tracking-widest border-b border-white/5 pb-4 ">
-          Some of my Skills
-          </h2>
-          <ContactButton icon="/code.svg" text="View more Skills >" link="/Skills" />
-          </div>
-
-          <p>
+          <section className="flex flex-col w-full p-2">
+            <div className="flex justify-between w-full">
+              <h2 className="flex font-exp text-[40px] mb-16 tracking-widest border-b border-white/5 pb-4 ">
+                Some of my Skills
+              </h2>
+              <ContactButton icon="/code.svg" text="View more Skills >" link="/Skills" />
+            </div>
+            <p>
             
-          </p>
-        </section>
-        
-        
-        
-        
-        
-          
+            </p>
+          </section>
 
         <section className="w-full p-3">
           <h2 className="font-exp text-[40px] mb-16 tracking-widest border-b border-white/5 pb-4">
@@ -199,7 +194,31 @@ const Content = () => {
           </p>
         </section>
 
-</div>
+
+          <section className="w-full p-3">
+          <div className="flex justify-between w-full">
+              <h2 className="flex font-exp text-[40px] mb-16 tracking-widest border-b border-white/5 pb-4 ">
+                Some of my Projects
+              </h2>
+              <ContactButton icon="/code.svg" text="View more projects >" link="/Portfolio" />
+          </div>
+          <p>
+            
+          </p>
+        </section>
+
+        <section className="w-full p-3">
+          <h2 className="font-exp text-[40px] mb-16 tracking-widest border-b border-white/5 pb-4">
+          Achivements
+          </h2>
+
+          <p>
+
+          </p>
+        </section>
+
+
+        </div>
 
 
 
@@ -215,7 +234,7 @@ const Content = () => {
             ["4+", "Happy clients"],
             ["250+", "Problems solved"],
             ["3+", "Certifications"],
-            ["200+", "Commits"],
+            ["799+", "Commits"],
             ["4+", "Languages"],
           ].map(([num, label]) => (
             <div key={label} className="group flex justify-center items-center w-[180px] h-[180px] md:w-[210px] md:h-[210px] bg-pink-500 rounded-full transition-all duration-500 hover:shadow-[0_0_30px_rgba(236,72,153,0.4)]">

@@ -28,6 +28,8 @@ export default function ContactPage() {
           speed={1.3}
           edgeFade={0.33}
           transparent
+          className=""
+          style={{}}
         />
       </div>
 
