@@ -162,9 +162,46 @@ const Content = () => {
           <div className="h-1 w-20 bg-pink-500 rounded-full group-hover:w-32 transition-all duration-500"></div>
         </div>
         {/* <div className="p-5 w-30 bg-purple-500 mt-4 rounded-full shadow-[0_0_15px_rgba(168,85,247,0.5)]">Skills {'>'}</div> */}
-        <ContactButton icon="/code.svg" text="Skills >" link="/Skills" />
+        
+
+        
 
       </section>
+
+
+      
+        <div className="flex flex-col w-full pl-16 pr-16">
+        <section className="flex flex-col w-full p-2">
+          <div className="flex justify-between w-full">
+          <h2 className="flex font-exp text-[40px] mb-16 tracking-widest border-b border-white/5 pb-4 ">
+          Some of my Skills
+          </h2>
+          <ContactButton icon="/code.svg" text="View more Skills >" link="/Skills" />
+          </div>
+
+          <p>
+            
+          </p>
+        </section>
+        
+        
+        
+        
+        
+          
+
+        <section className="w-full p-3">
+          <h2 className="font-exp text-[40px] mb-16 tracking-widest border-b border-white/5 pb-4">
+          Experience
+          </h2>
+          <p>
+            
+          </p>
+        </section>
+
+</div>
+
+
 
       {/* FACTS SECTION */}
       <section className="w-full max-w-7xl px-8 md:px-11 pb-32">
