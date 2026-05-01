@@ -90,6 +90,7 @@ const Content = () => {
               ["shell scripting(Bash)",30],
               ["TypeScript", 75],
               ["Python", 70],
+              ["Assembly", 10],
               ["HTML", 95],
               ["CSS", 95],
             ]}
@@ -104,6 +105,7 @@ const Content = () => {
               ["React", 60],
               ["Node.js", 40],
               ["Next.js", 75],
+              ["Express.js", 51],
               ["Flutter", 20],
             ]}
           />
@@ -123,6 +125,7 @@ const Content = () => {
           <SimpleList
             items={[
               "Linux",
+              "Arch Linux",
               "Neo-Vim",
               "Bash",
               "VS Code",
@@ -132,11 +135,13 @@ const Content = () => {
           />
           <SimpleList
             items={[
+              "MongoDB",
+              "Postgress DB",
               "Figma",
               "Blender",
               "DaVinci Resolve",
               "GitHub",
-              "Unreal Engine",
+              "Unity",
             ]}
           />
         </TwoColumn>

@@ -6,6 +6,63 @@ import Navbar from "@/app/Navigation/NavBar";
 import Footer from "@/app/Navigation/Footer";
 import { ContactButton } from "@/app/Contact_me/page";
 import PixelBlast from "@/components/PixelBlast"
+import { SectionTitle, TwoColumn, MinimalSkillList, SimpleList, NormalList } from "@/components/custom/lists";
+import {ProjectModal,ProjectCard} from "@/components/custom/projectViewers"
+
+
+
+
+/* =====================
+  PROJECT TYPE & DATA
+===================== */
+type Project = {
+  image: string;
+  title: string;
+  description: string;
+  githubLink?: string;
+  deployedLink?: string;
+  modelPath?: string; // Added optional property for 3D models
+};
+
+const projectsData: Project[] = [
+  
+  {
+    image: "/Hackclock.svg",
+    title: "HackClock",
+    description: "hackTime is a hackathon control room for organizers, stage screens, and participants. It lets you create a timed event flow, launch a live countdown, broadcast announcements, and share a room code so teams can join the clock view instantly.",
+    deployedLink: "https://hacktime.githubsrmist.in/",
+    githubLink: "https://github.com/SRM-IST-KTR/hacktime",
+  },{
+    image: "/solespania.png",
+    title: "SolEspania — Spain Tour Guide",
+    description: "A comprehensive web application designed to guide tourists through Spain. Features interactive guides, location details, and a beautiful UI.",
+    deployedLink: "https://spain-tour-guide.vercel.app/",
+    githubLink: "https://github.com/Cyberbee-pro/Spain-tour-guide",
+  },
+  {
+    image: "/brain.jpg",
+    title: "Brain 3D Model (Blender)",
+    description: "A detailed 3D model of a human brain created using Blender. You can interact with this model right here in the browser!",
+    modelPath: "/brain.glb", // Triggers the 3D viewer in the modal
+  },
+  {
+    image: "/Synthflow.svg",
+    title: "Synthflow — Work in Progress",
+    description: "SynthFlow is a lightweight, open-source music streaming platform designed to give the music back to the listener. Inspired by the leek aesthetic, it offers a seamless, high-fidelity audio experience completely free from ad interruptions. ",
+    githubLink: "https://github.com/Cyberbee-pro/SynthFlow",
+  },
+  {
+    image: "/Angelplayer.png",
+    title: "Angel Player — Work in Progress",
+    description: "An anti-doom scrolling browser extension designed to help users manage their screen time and build healthier digital habits.",
+    githubLink: "https://github.com/Cyberbee-pro/anti-doom-scroll-extension-",
+  },
+];
+
+
+
+
+
 
 export default function Home() {
   return (
@@ -180,9 +237,31 @@ const Content = () => {
               </h2>
               <ContactButton icon="/code.svg" text="View more Skills >" link="/Skills" />
             </div>
-            <p>
-            
-            </p>
+          <MinimalSkillList
+            items={[
+              ["GitHub", "/ICONS/github.png"],
+              ["C", "/ICONS/C.svg"],
+              ["C++", "/ICONS/CPP.svg"],
+              ["Dart", "/ICONS/Dart.svg"],
+              ["Flutter","/ICONS/flutter.png"],
+              ["Java", "/ICONS/java.svg"],
+              ["JavaScript", "/ICONS/javascript.svg"],
+              ["Node.Js", "/ICONS/node.svg"],
+              ["Next.Js", "/ICONS/next.png"],
+              ["Express.Js", "/ICONS/express.png"],
+              ["TailWind", "/ICONS/tailwind.png"],
+              ["Mongo DB", "/ICONS/mongoDB.png"],
+              ["shell scripting(Bash)","/ICONS/bash.png"],
+              ["TypeScript", "/ICONS/typescript.svg"],
+              ["Python", "/ICONS/python.svg"],
+              ["Linux", "/ICONS/linux.png"],
+              ["Arch Linux", "/ICONS/arch.png"],
+              ["Figma", "/ICONS/figma.svg"],
+              ["Blender", "/ICONS/blender.png"],
+              ["Unity", "/ICONS/unity.png"],
+
+            ]}
+          />
           </section>
 
         <section className="w-full p-3">
@@ -202,9 +281,19 @@ const Content = () => {
               </h2>
               <ContactButton icon="/code.svg" text="View more projects >" link="/Portfolio" />
           </div>
-          <p>
-            
-          </p>
+          {/* PROJECT GRID */}
+                <section className="max-w-7xl mx-auto px-6 md:px-12 pb-24">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+                    {projectsData.map((project, index) => (
+                      <ProjectCard
+                        key={index}
+                        image={project.image}
+                        title={project.title}
+                        onClick={() => setSelectedProject(project)}
+                      />
+                    ))}
+                  </div>
+                </section>
         </section>
 
         <section className="w-full p-3">
@@ -213,7 +302,13 @@ const Content = () => {
           </h2>
 
           <p>
-
+            <NormalList items={[
+              ["ICPC High Honor","ICPC Asia Regional — Chennai 	2025"],
+              ["Top 10 / 300+","Ultron 9.0 Hackathon 	2026"],
+              ["Patent filed","Rem : Mark 1 - Advanced Encryption Algorithm"],
+              ["Undergraduate Researcher","SRMIST — Quantum Optimization 	- Ongoing"],
+              ["2nd runnerup in National Quiz competition","Top 3 teams among Hundreds in the West Bengal regional leg of Union Bank’s flagship quiz. 	2023"],
+              ]}/>
           </p>
         </section>
 

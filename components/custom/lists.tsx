@@ -26,6 +26,7 @@ export const TwoColumn = ({ children }: { children: React.ReactNode }) => (
   </div>
 );
 
+
 export const SkillList = ({ items }: { items: [string, number][] }) => (
   <div className="space-y-6">
     {items.map(([label, value]) => (
@@ -39,6 +40,42 @@ export const SkillList = ({ items }: { items: [string, number][] }) => (
     ))}
   </div>
 );
+
+export const MinimalSkillList = ({ items }: { items: [string, string][] }) => (
+  /* Use flex-row and flex-wrap to keep them side-by-side */
+  <div className="flex flex-row flex-wrap gap-6">
+    {items.map(([label, icon]) => (
+      <div key={label} className="group flex flex-col items-center">
+        <Image 
+          src={icon} 
+          alt={"image for " + label} 
+          width={40} 
+          height={40} 
+          className="opacity-80 group-hover:opacity-100 transition-opacity"
+          onError={(e) => (e.currentTarget.src = 'https://www.svgrepo.com/show/511005/code-square.svg')} 
+        />
+        <span className="text-sm font-medium text-gray-300 group-hover:text-white transition-colors mt-2">
+          {label}
+        </span>
+      </div>
+    ))}
+  </div>
+);
+
+
+export const NormalList = ({ items }: { items: [string, string][] }) => (
+  <div className="space-y-6">
+    {items.map(([label, des]) => (
+      <div key={label} className="group">
+        <div className="flex justify-between mb-2">
+          <span className="text-xl font-medium text-gray-300 group-hover:text-white transition-colors">{label}</span>
+          <span className="text-xl font-medium text-gray-300 group-hover:text-white transition-colors">{des}</span>
+        </div>
+      </div>
+    ))}
+  </div>
+);
+
 
 export const SimpleList = ({ items }: { items: string[] }) => (
   <ul className="grid grid-cols-1 gap-4">
