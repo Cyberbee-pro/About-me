@@ -4,13 +4,40 @@ import Image from "next/image";
 import Link from "next/link";
 import Navbar from "../Navigation/NavBar"; // Ensure this path is correct
 import Footer from "../Navigation/Footer"; // Ensure this path is correct
+import PixelBlast from "@/components/PixelBlast"
+
 
 export default function SkillsPage() {
   return (
-    <div className="min-h-screen flex flex-col bg-gradient-to-b from-[#35014d] via-[#1a0029] to-[#1d022a] text-white font-sans">
-      <Navbar />
-      <Content />
-      <Footer />
+    <div className="min-h-screen flex flex-col text-white font-sans">
+      <div className="fixed inset-0 z-0 pointer-events-none">
+        <PixelBlast
+          variant="circle"
+          pixelSize={3}
+          color="#B497CF"
+          patternScale={8}
+          patternDensity={1.05}
+          pixelSizeJitter={1.6}
+          enableRipples
+          rippleSpeed={0.4}
+          rippleThickness={0.12}
+          rippleIntensityScale={1.5}
+          liquid={false}
+          liquidStrength={0.12}
+          liquidRadius={1.2}
+          liquidWobbleSpeed={5}
+          speed={1.3}
+          edgeFade={0.33}
+          transparent
+        />
+      </div>
+
+      {/* FOREGROUND CONTENT LAYER */}
+      <div className="relative z-10 flex flex-col min-h-screen">
+        <Navbar />
+        <Content />
+        <Footer />
+      </div>
     </div>
   );
 }
@@ -50,6 +77,7 @@ const Content = () => {
               ["C", 95],
               ["C++", 65],
               ["Dart", 75],
+              ["lua",10],
               ["Java", 85],
               ["JavaScript", 75],
             ]}
@@ -92,7 +120,7 @@ const Content = () => {
           <SimpleList
             items={[
               "Linux",
-              "Vim",
+              "Neo-Vim",
               "Bash",
               "VS Code",
               "Apache NetBeans (Java)",
@@ -135,7 +163,7 @@ const SectionTitle = ({ icon, text }: { icon: string; text: string }) => (
 );
 
 const TwoColumn = ({ children }: { children: React.ReactNode }) => (
-  <div className="grid grid-cols-1 md:grid-cols-2 gap-x-20 gap-y-6 mb-16">
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-x-20 gap-y-6 mb-16 p-3 bg-white/15 rounded-2xl border border-white/10 ">
     {children}
   </div>
 );

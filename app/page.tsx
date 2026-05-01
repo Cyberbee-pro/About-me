@@ -5,13 +5,41 @@ import Link from "next/link";
 import Navbar from "@/app/Navigation/NavBar";
 import Footer from "@/app/Navigation/Footer";
 import { ContactButton } from "@/app/Contact_me/page";
+import PixelBlast from "@/components/PixelBlast"
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col bg-gradient-to-b from-[#35014d] via-[#1a0029] to-[#1d022a] text-white overflow-x-hidden">
-      <Navbar />
-      <Content />
-      <Footer />
+    <div className="min-h-screen flex flex-col text-white overflow-x-hidden">
+      
+      <div className="fixed inset-0 z-0 pointer-events-none">
+        <PixelBlast
+          variant="circle"
+          pixelSize={3}
+          color="#B497CF"
+          patternScale={8}
+          patternDensity={1.05}
+          pixelSizeJitter={1.6}
+          enableRipples
+          rippleSpeed={0.4}
+          rippleThickness={0.12}
+          rippleIntensityScale={1.5}
+          liquid={false}
+          liquidStrength={0.12}
+          liquidRadius={1.2}
+          liquidWobbleSpeed={5}
+          speed={1.3}
+          edgeFade={0.33}
+          transparent
+        />
+      </div>
+
+      {/* FOREGROUND CONTENT LAYER */}
+      <div className="relative z-10 flex flex-col min-h-screen">
+        <Navbar />
+        <Content />
+        <Footer />
+      </div>
+      
     </div>
   );
 }
