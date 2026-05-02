@@ -59,6 +59,12 @@ const projectsData: Project[] = [
     githubLink: "https://github.com/SRM-IST-KTR/hacktime",
   },
   {
+    image: "/projMedia/morse.jpg",
+    title: "M2C - prgraming language",
+    description: "M2C is a Morse-code-flavored compiler project whose long-term goal is to translate .cym2c source files into valid English output, currently it has print functionality and main functionalities. ",
+    githubLink: "https://github.com/Cyberbee-pro/M2C-compiler",
+  },
+  {
     image: "/Cpro.png",
     title: "Beedots — Work in Progress",
     description: "A hyprland based arch rice.",
