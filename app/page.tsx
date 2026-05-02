@@ -9,6 +9,7 @@ import { ContactButton } from "@/app/Contact_me/page";
 import PixelBlast from "@/components/PixelBlast"
 import { MinimalSkillList, SimpleList, NormalList } from "@/components/custom/lists";
 import { ProjectCard, ProjectModal } from "@/components/custom/projectViewers"
+import { Datacard } from "@/components/custom/showExp";
 
 
 
@@ -272,9 +273,21 @@ const Content = () => {
           <h2 className="font-exp text-[40px] mb-16 tracking-widest border-b border-white/5 pb-4">
           Experience
           </h2>
-          <p>
+          <Datacard 
+          compName="Cognifyz Technologies" 
+          CompImg="/CompIcons/ctg.jpg" 
+          role="Web Devoloper Intern"
+          duration="Nov 2025 ~ Jan 2026"
+          description="   
+            • Developed and optimized modern web applications using Next.js and Sass,implementing modular styling and server-side rendering to enhance SEO and page load performance.
+            • Engineered dynamic data-fetching layers to interact with RESTful APIs, efficiently managing asynchronous data to populate complex UI components in real-time.
+            • Implemented robust client-side validation for user input forms, utilizing advanced logic to ensure data integrity, improve security, and provide immediate user feedback.."
             
-          </p>
+          type="Intership"
+          Media={[ 
+                ["/CompMedia/internship_completion_cert.jpg"],
+                ["/CompMedia/Intern_offer_letter.jpg"],
+                ]}> </Datacard>
         </section>
 
 
