@@ -9,7 +9,7 @@ import { ContactButton } from "@/app/Contact_me/page";
 import PixelBlast from "@/components/PixelBlast"
 import { MinimalSkillList, SimpleList, NormalList } from "@/components/custom/lists";
 import { ProjectCard, ProjectModal } from "@/components/custom/projectViewers"
-import { Datacard, DatacardExtra } from "@/components/custom/showExp";
+import { Datacard, DatacardExtra, DatacardPromote } from "@/components/custom/showExp";
 
 
 
@@ -318,19 +318,14 @@ const Content = () => {
           type="Oraganization"
           Media={[["/CompMedia/BadgeA.jpg"]]}/>
 
-          <DatacardExtra 
-          compName="GirlScript Summer Of Code" 
-          CompImg="/CompIcons/gssoc.jpg" 
+          <DatacardPromote  
           role="Participant"
           duration="Apr 2026 ~ Present"
-          descriptionOrg=" India's largest builder program for developers, students, and AI creators. A non-profit initiative by GirlScript Foundation."
-          description="Partnered with a global team to maintain code integrity and enhance project functionality.
-          "
-          type="Oraganization"
+          description="Partnered with a global team to maintain code integrity and enhance project functionality."
           Media={[["/CompMedia/badgeP.jpg"]]}/>
 
 
-          <DatacardExtra 
+          <DatacardExtra
           compName="open source global connect" 
           CompImg="/CompIcons/osgc.jpg" 
           role="Contributor"
@@ -360,14 +355,24 @@ const Content = () => {
           <DatacardExtra 
           compName="F.A.S.T. X Nvdia SRM" 
           CompImg="/CompIcons/fast.jpg" 
-          role="Technical Team Member"
-          duration="Sep 2025 ~ Present"
+          role="DLI System designer and developer"
+          duration="Mar 2026 ~ Present"
           descriptionOrg="A student-led research-focused community established by NVIDIA in collaboration with SRM University, working on advanced technologies including AI and related Domains"
+          description="
+          • Architected and developed the F.A.S.T. Deep Learning Institute (DLI) platform, a high-performance web application
+          • Engineered a robust Role-Based Access Control (RBAC) system, creating distinct governance environments for Admins, Moderators, and Members.
+          • Built a dual-layer approval routing pipeline for the platform's gamified Task Board and NVIDIA course access requests, complete with global state management.
+          • a real-time analytics dashboard utilizing complex backend aggregations 
+          "
+          type="Club"/>
+
+          <DatacardPromote  
+          role="Technical Team Member"
+          duration="Apr 2026 ~ Present"
           description="
     • Develop and maintain web solutions for organization website community projects and events 
     • Actively contribute to AI-based applications and research activities
-    • Collaborate with peers in technical workshops, hackathons, and open-source projects"
-          type="Club"/>
+    • Collaborate with peers in technical workshops, hackathons, and open-source projects"/>
 
 
         </section>
