@@ -287,7 +287,7 @@ const Content = () => {
           Media={[ 
                 ["/CompMedia/internship_completion_cert.jpg"],
                 ["/CompMedia/Intern_offer_letter.jpg"],
-                ]}> </Datacard>
+                ]}/>
         </section>
 
 

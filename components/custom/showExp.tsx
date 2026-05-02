@@ -9,7 +9,7 @@ export function Datacard({
     duration , 
     description , 
     role  , 
-    Media = [], 
+    Media , 
     type }:{
     compName : string, 
     CompImg?:string ,
