@@ -9,7 +9,7 @@ import { ContactButton } from "@/app/Contact_me/page";
 import PixelBlast from "@/components/PixelBlast"
 import { MinimalSkillList, SimpleList, NormalList } from "@/components/custom/lists";
 import { ProjectCard, ProjectModal } from "@/components/custom/projectViewers"
-import { Datacard } from "@/components/custom/showExp";
+import { Datacard, DatacardExtra } from "@/components/custom/showExp";
 
 
 
@@ -270,7 +270,7 @@ const Content = () => {
           </section>
 
         <section className="w-full p-3">
-          <h2 className="font-exp text-[40px] mb-16 tracking-widest border-b border-white/5 pb-4">
+          <h2 className="font-exp text-[40px] tracking-widest border-b border-white/5 pb-4">
           Experience
           </h2>
           <Datacard 
@@ -288,6 +288,88 @@ const Content = () => {
                 ["/CompMedia/internship_completion_cert.jpg"],
                 ["/CompMedia/Intern_offer_letter.jpg"],
                 ]}/>
+          <Datacard 
+          compName="Vistalane LTD" 
+          CompImg="/CompIcons/vista.jpg" 
+          role="Backend Devoloper Intern"
+          duration="Dec 2025 ~ Jan 2026"
+          description="
+          • Contributed to building and validating robust backend APIs to support scalability.
+          • Work closely with the Flutter team to align backend logic with frontend requirements."
+          type="Intership"/>
+
+
+          <h2 className="font-exp text-[40px] tracking-widest border-b border-white/5 pb-4">
+          Extra Curriculars
+          </h2>
+
+
+          <DatacardExtra 
+          compName="GirlScript Summer Of Code" 
+          CompImg="/CompIcons/gssoc.jpg" 
+          role="Campus Ambassador"
+          duration="Apr 2026 ~ Present"
+          descriptionOrg=" India's largest builder program for developers, students, and AI creators. A non-profit initiative by GirlScript Foundation."
+          description="
+          Brand Liaison: Acted as the primary bridge between the organization and the student body to increase brand visibility.
+          Strategic Marketing: Drove user acquisition and community engagement through targeted social media campaigns and word-of-mouth.
+          Leadership: Coordinated with university faculty and student leaders to streamline corporate-academic partnerships.
+          "
+          type="Oraganization"
+          Media={[["/CompMedia/BadgeA.jpg"]]}/>
+
+          <DatacardExtra 
+          compName="GirlScript Summer Of Code" 
+          CompImg="/CompIcons/gssoc.jpg" 
+          role="Participant"
+          duration="Apr 2026 ~ Present"
+          descriptionOrg=" India's largest builder program for developers, students, and AI creators. A non-profit initiative by GirlScript Foundation."
+          description="Partnered with a global team to maintain code integrity and enhance project functionality.
+          "
+          type="Oraganization"
+          Media={[["/CompMedia/badgeP.jpg"]]}/>
+
+
+          <DatacardExtra 
+          compName="open source global connect" 
+          CompImg="/CompIcons/osgc.jpg" 
+          role="Contributor"
+          duration="Feb 2026 ~ Apr 2026"
+          descriptionOrg="Open Source Connect Global 2026 is an international event connecting innovators, developers, mentors, universities, startups, and organizations worldwide."
+          description="Partnered with a global team to maintain code integrity and enhance project functionality.
+          "
+          type="Participant"
+          Media={[["/CompMedia/Cert_participation.jpg"],["/CompMedia/cert_part.jpg"],["/CompMedia/id_osgc.jpg"]]}/>
+          
+
+          <DatacardExtra 
+          compName="GitHub Community SRM" 
+          CompImg="/CompIcons/gcsrm.jpg" 
+          role="Technical Team Member"
+          duration="Sep 2025 ~ Present"
+          descriptionOrg="A student-led developer community established and affiliated by GitHub in collaboration with SRM University, contributing to both web and AI development initiatives."
+          description="
+    • Develop and maintain web solutions for community projects and events 
+    • Actively contribute to AI-based applications and research activities
+    • Collaborate with peers in technical workshops, hackathons, and open-source projects
+    • Enhance project accessibility and user experience through continuous improvement"
+          type="Club"
+          Media={[["/CompMedia/cert_orgH.jpg"],["/CompMedia/Cert_orgE.jpg"]]}/>
+
+        
+          <DatacardExtra 
+          compName="F.A.S.T. X Nvdia SRM" 
+          CompImg="/CompIcons/fast.jpg" 
+          role="Technical Team Member"
+          duration="Sep 2025 ~ Present"
+          descriptionOrg="A student-led research-focused community established by NVIDIA in collaboration with SRM University, working on advanced technologies including AI and related Domains"
+          description="
+    • Develop and maintain web solutions for organization website community projects and events 
+    • Actively contribute to AI-based applications and research activities
+    • Collaborate with peers in technical workshops, hackathons, and open-source projects"
+          type="Club"/>
+
+
         </section>
 
 
