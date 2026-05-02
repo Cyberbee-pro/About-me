@@ -229,7 +229,7 @@ const Content = () => {
 
 
       
-        <div className="flex flex-col w-full pl-16 pr-16">
+        <div className="flex flex-col max-w-7xl mx-auto pl-16 pr-16">
           <section className="flex flex-col w-full p-2">
             <div className="flex justify-between w-full">
               <h2 className="flex font-exp text-[40px] mb-16 tracking-widest border-b border-white/5 pb-4 ">
