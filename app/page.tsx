@@ -80,6 +80,7 @@ export default function Home() {
           speed={1.3}
           edgeFade={0.33}
           transparent
+          style={{}}
           className=""
         />
       </div>
