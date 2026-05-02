@@ -1,7 +1,16 @@
 import Link from "next/link";
-import { useState } from "react";
 import dynamic from "next/dynamic";
 
+const ModelViewer = dynamic(() => import("@/components/custom/ModelViewer"), { ssr: false });
+
+export type Project = {
+  image: string;
+  title: string;
+  description: string;
+  githubLink?: string;
+  deployedLink?: string;
+  modelPath?: string;
+};
 
 /* =====================
   PROJECT CARD

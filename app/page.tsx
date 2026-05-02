@@ -1,13 +1,14 @@
 "use client";
 
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/app/Navigation/NavBar";
 import Footer from "@/app/Navigation/Footer";
 import { ContactButton } from "@/app/Contact_me/page";
 import PixelBlast from "@/components/PixelBlast"
-import { SectionTitle, TwoColumn, MinimalSkillList, SimpleList, NormalList } from "@/components/custom/lists";
-import {ProjectModal,ProjectCard} from "@/components/custom/projectViewers"
+import { MinimalSkillList, SimpleList, NormalList } from "@/components/custom/lists";
+import { ProjectCard, ProjectModal } from "@/components/custom/projectViewers"
 
 
 
@@ -107,6 +108,8 @@ export default function Home() {
   CONTENT
 ===================== */
 const Content = () => {
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+
   return (
     <main className="pt-32 flex flex-col items-center">
       
@@ -257,6 +260,7 @@ const Content = () => {
               ["Linux", "/ICONS/linux.png"],
               ["Arch Linux", "/ICONS/arch.png"],
               ["Figma", "/ICONS/figma.svg"],
+              ["Da Vinchi Resolve", "/ICONS/dvr.svg"],
               ["Blender", "/ICONS/blender.png"],
               ["Unity", "/ICONS/unity.png"],
 
@@ -295,6 +299,13 @@ const Content = () => {
                   </div>
                 </section>
         </section>
+
+        {selectedProject && (
+          <ProjectModal
+            project={selectedProject}
+            onClose={() => setSelectedProject(null)}
+          />
+        )}
 
         <section className="w-full p-3">
           <h2 className="font-exp text-[40px] mb-16 tracking-widest border-b border-white/5 pb-4">
