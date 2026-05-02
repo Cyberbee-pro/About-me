@@ -1,17 +1,105 @@
 "use client";
 
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/app/Navigation/NavBar";
 import Footer from "@/app/Navigation/Footer";
 import { ContactButton } from "@/app/Contact_me/page";
+import PixelBlast from "@/components/PixelBlast"
+import { MinimalSkillList, SimpleList, NormalList } from "@/components/custom/lists";
+import { ProjectCard, ProjectModal } from "@/components/custom/projectViewers"
+
+
+
+
+/* =====================
+  PROJECT TYPE & DATA
+===================== */
+type Project = {
+  image: string;
+  title: string;
+  description: string;
+  githubLink?: string;
+  deployedLink?: string;
+  modelPath?: string; // Added optional property for 3D models
+};
+
+const projectsData: Project[] = [
+  
+  {
+    image: "/Hackclock.svg",
+    title: "HackClock",
+    description: "hackTime is a hackathon control room for organizers, stage screens, and participants. It lets you create a timed event flow, launch a live countdown, broadcast announcements, and share a room code so teams can join the clock view instantly.",
+    deployedLink: "https://hacktime.githubsrmist.in/",
+    githubLink: "https://github.com/SRM-IST-KTR/hacktime",
+  },{
+    image: "/solespania.png",
+    title: "SolEspania — Spain Tour Guide",
+    description: "A comprehensive web application designed to guide tourists through Spain. Features interactive guides, location details, and a beautiful UI.",
+    deployedLink: "https://spain-tour-guide.vercel.app/",
+    githubLink: "https://github.com/Cyberbee-pro/Spain-tour-guide",
+  },
+  {
+    image: "/brain.jpg",
+    title: "Brain 3D Model (Blender)",
+    description: "A detailed 3D model of a human brain created using Blender. You can interact with this model right here in the browser!",
+    modelPath: "/brain.glb", // Triggers the 3D viewer in the modal
+  },
+  {
+    image: "/Synthflow.svg",
+    title: "Synthflow — Work in Progress",
+    description: "SynthFlow is a lightweight, open-source music streaming platform designed to give the music back to the listener. Inspired by the leek aesthetic, it offers a seamless, high-fidelity audio experience completely free from ad interruptions. ",
+    githubLink: "https://github.com/Cyberbee-pro/SynthFlow",
+  },
+  {
+    image: "/Angelplayer.png",
+    title: "Angel Player — Work in Progress",
+    description: "An anti-doom scrolling browser extension designed to help users manage their screen time and build healthier digital habits.",
+    githubLink: "https://github.com/Cyberbee-pro/anti-doom-scroll-extension-",
+  },
+];
+
+
+
+
+
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col bg-gradient-to-b from-[#35014d] via-[#1a0029] to-[#1d022a] text-white overflow-x-hidden">
-      <Navbar />
-      <Content />
-      <Footer />
+    <div className="min-h-screen flex flex-col text-white overflow-x-hidden">
+      
+      <div className="fixed inset-0 z-0 pointer-events-none">
+        <PixelBlast
+          variant="circle"
+          pixelSize={3}
+          color="#B497CF"
+          patternScale={8}
+          patternDensity={1.05}
+          pixelSizeJitter={1.6}
+          enableRipples
+          rippleSpeed={0.4}
+          rippleThickness={0.12}
+          rippleIntensityScale={1.5}
+          liquid={false}
+          liquidStrength={0.12}
+          liquidRadius={1.2}
+          liquidWobbleSpeed={5}
+          speed={1.3}
+          edgeFade={0.33}
+          transparent
+          className=""
+          style={{}}
+        />
+      </div>
+
+      {/* FOREGROUND CONTENT LAYER */}
+      <div className="relative z-10 flex flex-col min-h-screen">
+        <Navbar />
+        <Content />
+        <Footer />
+      </div>
+      
     </div>
   );
 }
@@ -20,6 +108,8 @@ export default function Home() {
   CONTENT
 ===================== */
 const Content = () => {
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+
   return (
     <main className="pt-32 flex flex-col items-center">
       
@@ -134,9 +224,109 @@ const Content = () => {
           <div className="h-1 w-20 bg-pink-500 rounded-full group-hover:w-32 transition-all duration-500"></div>
         </div>
         {/* <div className="p-5 w-30 bg-purple-500 mt-4 rounded-full shadow-[0_0_15px_rgba(168,85,247,0.5)]">Skills {'>'}</div> */}
-        <ContactButton icon="/code.svg" text="Skills >" link="/Skills" />
+        
+
+        
 
       </section>
+
+
+      
+        <div className="flex flex-col max-w-7xl mx-auto pl-16 pr-16">
+          <section className="flex flex-col w-full p-2">
+            <div className="flex justify-between w-full">
+              <h2 className="flex font-exp text-[40px] mb-16 tracking-widest border-b border-white/5 pb-4 ">
+                Some of my Skills
+              </h2>
+              <ContactButton icon="/code.svg" text="View more Skills >" link="/Skills" />
+            </div>
+          <MinimalSkillList
+            items={[
+              ["GitHub", "/ICONS/github.png"],
+              ["C", "/ICONS/C.svg"],
+              ["C++", "/ICONS/CPP.svg"],
+              ["Dart", "/ICONS/Dart.svg"],
+              ["Flutter","/ICONS/flutter.png"],
+              ["Java", "/ICONS/java.svg"],
+              ["JavaScript", "/ICONS/javascript.svg"],
+              ["Node.Js", "/ICONS/node.svg"],
+              ["Next.Js", "/ICONS/next.png"],
+              ["Express.Js", "/ICONS/express.png"],
+              ["TailWind", "/ICONS/tailwind.png"],
+              ["Mongo DB", "/ICONS/mongoDB.png"],
+              ["shell scripting(Bash)","/ICONS/bash.png"],
+              ["TypeScript", "/ICONS/typescript.svg"],
+              ["Python", "/ICONS/python.svg"],
+              ["Linux", "/ICONS/linux.png"],
+              ["Arch Linux", "/ICONS/arch.png"],
+              ["Figma", "/ICONS/figma.svg"],
+              ["Da Vinchi Resolve", "/ICONS/dvr.svg"],
+              ["Blender", "/ICONS/blender.png"],
+              ["Unity", "/ICONS/unity.png"],
+
+            ]}
+          />
+          </section>
+
+        <section className="w-full p-3">
+          <h2 className="font-exp text-[40px] mb-16 tracking-widest border-b border-white/5 pb-4">
+          Experience
+          </h2>
+          <p>
+            
+          </p>
+        </section>
+
+
+          <section className="w-full p-3">
+          <div className="flex justify-between w-full">
+              <h2 className="flex font-exp text-[40px] mb-16 tracking-widest border-b border-white/5 pb-4 ">
+                Some of my Projects
+              </h2>
+              <ContactButton icon="/code.svg" text="View more projects >" link="/Portfolio" />
+          </div>
+          {/* PROJECT GRID */}
+                <section className="max-w-7xl mx-auto px-6 md:px-12 pb-24">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+                    {projectsData.map((project, index) => (
+                      <ProjectCard
+                        key={index}
+                        image={project.image}
+                        title={project.title}
+                        onClick={() => setSelectedProject(project)}
+                      />
+                    ))}
+                  </div>
+                </section>
+        </section>
+
+        {selectedProject && (
+          <ProjectModal
+            project={selectedProject}
+            onClose={() => setSelectedProject(null)}
+          />
+        )}
+
+        <section className="w-full p-3">
+          <h2 className="font-exp text-[40px] mb-16 tracking-widest border-b border-white/5 pb-4">
+          Achivements
+          </h2>
+
+          <p>
+            <NormalList items={[
+              ["ICPC High Honor","ICPC Asia Regional — Chennai 	2025"],
+              ["Top 10 / 300+","Ultron 9.0 Hackathon 	2026"],
+              ["Patent filed","Rem : Mark 1 - Advanced Encryption Algorithm"],
+              ["Undergraduate Researcher","SRMIST — Quantum Optimization 	- Ongoing"],
+              ["2nd runnerup in National Quiz competition","Top 3 teams among Hundreds in the West Bengal regional leg of Union Bank’s flagship quiz. 	2023"],
+              ]}/>
+          </p>
+        </section>
+
+
+        </div>
+
+
 
       {/* FACTS SECTION */}
       <section className="w-full max-w-7xl px-8 md:px-11 pb-32">
@@ -150,7 +340,7 @@ const Content = () => {
             ["4+", "Happy clients"],
             ["250+", "Problems solved"],
             ["3+", "Certifications"],
-            ["200+", "Commits"],
+            ["799+", "Commits"],
             ["4+", "Languages"],
           ].map(([num, label]) => (
             <div key={label} className="group flex justify-center items-center w-[180px] h-[180px] md:w-[210px] md:h-[210px] bg-pink-500 rounded-full transition-all duration-500 hover:shadow-[0_0_30px_rgba(236,72,153,0.4)]">
