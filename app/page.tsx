@@ -221,6 +221,7 @@ const Content = () => {
             </h2>
             <ContactButton icon="/code.svg" text="View more Skills >" link="/Skills" />
           </div>
+          <div className="bg-white/6 rounded-2xl">
           <MinimalSkillList
             items={[
               ["GitHub", "/ICONS/github.png"], ["C", "/ICONS/C.svg"], ["C++", "/ICONS/CPP.svg"],
@@ -231,7 +232,9 @@ const Content = () => {
               ["Linux", "/ICONS/linux.png"], ["Arch Linux", "/ICONS/arch.png"], ["Figma", "/ICONS/figma.svg"],
               ["Da Vinchi Resolve", "/ICONS/dvr.svg"], ["Blender", "/ICONS/blender.png"], ["Unity", "/ICONS/unity.png"],
             ]}
+            
           />
+          </div>
         </section>
 
         {/* EXPERIENCE SECTION */}
