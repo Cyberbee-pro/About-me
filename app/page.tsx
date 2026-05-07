@@ -232,7 +232,6 @@ const Content = () => {
               ["Linux", "/ICONS/linux.png"], ["Arch Linux", "/ICONS/arch.png"], ["Figma", "/ICONS/figma.svg"],
               ["Da Vinchi Resolve", "/ICONS/dvr.svg"], ["Blender", "/ICONS/blender.png"], ["Unity", "/ICONS/unity.png"],
             ]}
-            
           />
           </div>
         </section>
