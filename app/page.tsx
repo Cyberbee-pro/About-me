@@ -165,7 +165,7 @@ const Content = () => {
   gridSize={8}
   pixelColor="#9B59B6"
   once={false}
-  animationStepDuration={0.4}
+  animationStepDuration={0.15}
   className="custom-pixel-card w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full"
   
 />
