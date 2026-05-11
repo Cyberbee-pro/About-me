@@ -3,13 +3,16 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import dynamic from "next/dynamic";
 import Navbar from "@/app/Navigation/NavBar";
 import Footer from "@/app/Navigation/Footer";
 import { ContactButton } from "@/components/custom/Button";
-import PixelBlast from "@/components/PixelBlast"
 import { MinimalSkillList, SimpleList, NormalList } from "@/components/custom/lists";
 import { ProjectCard, ProjectModal } from "@/components/custom/projectViewers"
 import { Datacard, DatacardExtra, DatacardPromote } from "@/components/custom/showExp";
+
+const PixelBlast = dynamic(() => import('@/components/PixelBlast'), { ssr: false });
+const PixelTransition = dynamic(() => import('@/components/PixelTransition'), { ssr: false });
 
 /* =====================
   PROJECT TYPE & DATA
@@ -135,7 +138,42 @@ const Content = () => {
         </div>
 
         {/* RIGHT IMAGE */}
-        <div className="relative group mt-8 lg:mt-0">
+
+        <PixelTransition
+  firstContent={
+    <Image
+      src="/pfp.jpg"
+      alt="Shibraj Profile"
+      fill
+      priority
+      quality={90}
+      sizes="(max-width: 640px) 192px, (max-width: 768px) 256px, (max-width: 1024px) 320px, 384px"
+      className="object-cover"
+    />
+  }
+  secondContent={
+    <div
+      style={{
+        width: "100%",
+        height: "100%",
+        display: "grid",
+        placeItems: "center",
+        backgroundColor: "#111"
+      }}
+    >
+      <p style={{ fontWeight: 900, fontSize: "3rem", color: "#E91E63" }}>Hello!</p>
+    </div>
+  }
+  gridSize={8}
+  pixelColor="#9B59B6"
+  once={false}
+  animationStepDuration={0.15}
+  className="custom-pixel-card w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full"
+  
+/>
+
+
+        {/* <div className="relative group mt-8 lg:mt-0">
           <div className="absolute -inset-4 bg-gradient-to-tr from-pink-500/30 to-purple-500/30 rounded-full blur-2xl group-hover:opacity-60 transition duration-1000"></div>
           <div className="relative w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full p-1 bg-gradient-to-tr from-pink-500/50 to-purple-500/50">
             <div className="w-full h-full rounded-full bg-black overflow-hidden relative">
@@ -150,7 +188,8 @@ const Content = () => {
               />
             </div>
           </div>
-        </div>
+        </div> */}
+
       </section>
 
       {/* QUOTE SECTION */}
