@@ -3,14 +3,16 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import dynamic from "next/dynamic";
 import Navbar from "@/app/Navigation/NavBar";
 import Footer from "@/app/Navigation/Footer";
 import { ContactButton } from "@/components/custom/Button";
-import PixelBlast from "@/components/PixelBlast"
 import { MinimalSkillList, SimpleList, NormalList } from "@/components/custom/lists";
 import { ProjectCard, ProjectModal } from "@/components/custom/projectViewers"
 import { Datacard, DatacardExtra, DatacardPromote } from "@/components/custom/showExp";
-import PixelTransition from "@/components/PixelTransition";
+
+const PixelBlast = dynamic(() => import('@/components/PixelBlast'), { ssr: false });
+const PixelTransition = dynamic(() => import('@/components/PixelTransition'), { ssr: false });
 
 /* =====================
   PROJECT TYPE & DATA
