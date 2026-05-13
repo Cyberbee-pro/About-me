@@ -10,6 +10,7 @@ import { ContactButton } from "@/components/custom/Button";
 import { MinimalSkillList, SimpleList, NormalList } from "@/components/custom/lists";
 import { ProjectCard, ProjectModal } from "@/components/custom/projectViewers"
 import { Datacard, DatacardExtra, DatacardPromote } from "@/components/custom/showExp";
+import GlassSurface from "@/components/GlassSurface";
 
 const PixelBlast = dynamic(() => import('@/components/PixelBlast'), { ssr: false });
 const PixelTransition = dynamic(() => import('@/components/PixelTransition'), { ssr: false });
@@ -147,7 +148,7 @@ const Content = () => {
       fill
       priority
       quality={90}
-      sizes="(max-width: 640px) 192px, (max-width: 768px) 256px, (max-width: 1024px) 320px, 384px"
+      sizes="(max-width: 480px) 160px, (max-width: 640px) 192px, (max-width: 768px) 256px, (max-width: 1024px) 320px, (max-width: 1280px) 384px, 448px"
       className="object-cover"
     />
   }
@@ -161,14 +162,14 @@ const Content = () => {
         backgroundColor: "#111"
       }}
     >
-      <p style={{ fontWeight: 900, fontSize: "3rem", color: "#E91E63" }}>Hello!</p>
+      <p style={{ fontWeight: 900, fontSize: "clamp(1.5rem, 4vw, 3rem)", color: "#E91E63" }}>Hello!</p>
     </div>
   }
   gridSize={8}
   pixelColor="#9B59B6"
   once={false}
   animationStepDuration={0.15}
-  className="custom-pixel-card w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full"
+  className="custom-pixel-card w-40 h-40 xs:w-48 xs:h-48 sm:w-56 sm:h-56 md:w-72 md:h-72 lg:w-80 lg:h-80 xl:w-96 xl:h-96 2xl:w-[28rem] 2xl:h-[28rem] rounded-full aspect-square"
   
 />
 
@@ -253,6 +254,7 @@ const Content = () => {
       <div className="flex flex-col w-full max-w-7xl px-6 md:px-12 mx-auto">
         
         {/* SKILLS SECTION */}
+        
         <section className="flex flex-col w-full py-4">
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-10 md:mb-16">
             <h2 className="font-exp text-3xl md:text-[40px] tracking-widest border-b border-white/5 pb-2 sm:pb-4 w-full sm:w-auto">
@@ -260,7 +262,11 @@ const Content = () => {
             </h2>
             <ContactButton icon="/code.svg" text="View more Skills >" link="/Skills" />
           </div>
-          <div className="bg-white/6 rounded-2xl">
+        <GlassSurface 
+  borderRadius={50}
+  className="my-custom-class"
+>
+          <div className="rounded-2xl p-3">
           <MinimalSkillList
             items={[
               ["GitHub", "/ICONS/github.png"], ["C", "/ICONS/C.svg"], ["C++", "/ICONS/CPP.svg"],
@@ -273,6 +279,7 @@ const Content = () => {
             ]}
           />
           </div>
+          </GlassSurface>
         </section>
 
         {/* EXPERIENCE SECTION */}
