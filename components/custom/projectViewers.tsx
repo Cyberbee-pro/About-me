@@ -1,5 +1,6 @@
 import Link from "next/link";
 import dynamic from "next/dynamic";
+import GlareHover from "../GlareHover";
 
 const ModelViewer = dynamic(() => import("@/components/custom/ModelViewer"), { ssr: false });
 
@@ -19,27 +20,34 @@ export const ProjectCard = ({ image, title, onClick }: { image: string; title: s
   return (
     <div
       onClick={onClick}
-      className={`
-        cursor-pointer group relative w-full aspect-video rounded-xl 
-        bg-[#12011a] border border-white/10 overflow-hidden
-        transition-all duration-500 hover:border-purple-500/50 hover:shadow-[0_0_30px_rgba(168,85,247,0.15)]
-      `}
+      className="cursor-pointer group relative w-full aspect-video rounded-xl bg-[#12011a] border border-white/10 overflow-hidden transition-all duration-500 hover:border-purple-500/50 hover:shadow-[0_0_30px_rgba(168,85,247,0.15)]"
     >
-      {/* Background Image with fallback handling */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
-        style={{ backgroundImage: `url('${image}')` }}
-      />
-      
-      {/* Overlay Gradient */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
+      <GlareHover
+        glareColor="#ffffff"
+        glareOpacity={0.3}
+        glareAngle={-30}
+        glareSize={300}
+        transitionDuration={800}
+        playOnce={false}
+        // Ensure the glare wrapper fills the entire card
+        className="h-full w-full" 
+      >
+        {/* Background Image - Remove 'absolute inset-0' if the wrapper handles it */}
+        <div 
+          className="w-full h-full bg-cover bg-center "
+          style={{ backgroundImage: `url('${image}')` }}
+        />
+        
+        {/* Overlay Gradient - Keep inside GlareHover so the glare sits on top of it */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
 
-      {/* Text Info */}
-      <div className="absolute inset-0 flex items-end p-6">
-        <h3 className="text-lg md:text-xl font-medium tracking-wide group-hover:text-purple-300 transition-colors">
-          {title}
-        </h3>
-      </div>
+        {/* Text Info */}
+        <div className="absolute inset-0 flex items-end p-6">
+          <h3 className="text-lg md:text-xl font-medium tracking-wide group-hover:text-purple-300 transition-colors">
+            {title}
+          </h3>
+        </div>
+      </GlareHover>
     </div>
   );
 };

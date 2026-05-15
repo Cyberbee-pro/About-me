@@ -262,11 +262,7 @@ const Content = () => {
             </h2>
             <ContactButton icon="/code.svg" text="View more Skills >" link="/Skills" />
           </div>
-        <GlassSurface 
-  borderRadius={50}
-  className="my-custom-class"
->
-          <div className="rounded-2xl p-3">
+          <div className="rounded-2xl p-3 bg-amber-50/10">
           <MinimalSkillList
             items={[
               ["GitHub", "/ICONS/github.png"], ["C", "/ICONS/C.svg"], ["C++", "/ICONS/CPP.svg"],
@@ -279,7 +275,6 @@ const Content = () => {
             ]}
           />
           </div>
-          </GlassSurface>
         </section>
 
         {/* EXPERIENCE SECTION */}
